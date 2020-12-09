@@ -1,6 +1,8 @@
 .calculator {
   padding: 1rem;
-  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
 }
 
 .screen {
@@ -22,7 +24,7 @@
   border-radius: 1px;
 }
 
-/* LAYOUT */
+/* BUTTONS LAYOUT */
 .container {
   margin: 20px;
   display: grid;
