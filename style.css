@@ -1,6 +1,6 @@
 .calculator {
   padding: 1rem;
-  /* width: 600px; */
+  max-width: 600px;
 }
 
 .screen {
