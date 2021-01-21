@@ -39,8 +39,8 @@ function switchVariable() {
 function assign(input) {
   // Assigning a value to 'a' (or 'b')
   temp = temp + "" + input;
-  variableIsA ? (a = Number(temp)) : (b = Number(temp));
   display(temp);
+  variableIsA ? (a = Number(temp)) : (b = Number(temp));
   console.log(`a : ${a} b : ${b} temp : ${temp} variableIsA : ${variableIsA}`);
 }
 
@@ -83,6 +83,6 @@ function doOperation(a, b) {
 }
 
 function changeSign() {
-  a = 0 - a;
+  a = -a;
   display(a);
 }
