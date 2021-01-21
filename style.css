@@ -8,11 +8,12 @@ h2 {
 
 body {
   background: linear-gradient(to right, rgb(48, 103, 173), rgb(66, 179, 85));
+  height: 100%;
 }
 
 .calculator {
   padding: 1rem;
-  margin: 0px auto 20px;
+  margin: 40px auto 20px;
   display: flex;
   flex-direction: column;
   max-width: 500px;
