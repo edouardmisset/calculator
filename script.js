@@ -84,8 +84,9 @@ function doOperation(a, b) {
   } else if (isDivision) {
     result = a / b;
   }
-  a = result;
   display(result);
+  a = result;
+  b = "";
   console.log("a : " + a + " b : " + b + " r : " + result);
 }
 
