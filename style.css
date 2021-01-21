@@ -69,7 +69,7 @@ body {
 :root {
   --main-color: #f06d06;
   --green: hsl(74, 38%, 62%);
-  --dark-green: hsl(106, 51%, 32%);
+  --dark-green: hsl(106, 75%, 55%);
   --white: hsl(0, 0%, 95%);
   --grey: hsl(0, 0%, 41%);
   --dark: hsl(0, 0%, 18%);
@@ -77,7 +77,7 @@ body {
   --orange: hsl(16, 100%, 63%);
   --red: rgb(185, 49, 15);
   --yellow: rgb(255, 237, 72);
-  --blue: hsl(214, 57%, 43%);
+  --blue: hsl(214, 87%, 59%);
 }
 
 .white {
