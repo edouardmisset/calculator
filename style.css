@@ -1,12 +1,14 @@
 .calculator {
   padding: 1rem;
+  margin: auto;
   display: flex;
   flex-direction: column;
   max-width: 500px;
+  height: 630px;
 }
 
 .screen {
-  margin: 10px 20px 40px 20px;
+  margin: 20px 20px 40px 20px;
   text-align: right;
   color: rgba(34, 34, 34, 0.911);
   font-size: 4rem;
@@ -30,7 +32,7 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(5, 1fr);
-  gap: 15px;
+  gap: 4%;
 }
 
 .tall {
@@ -52,7 +54,7 @@
 /* COLORS */
 
 .dark {
-  background-color: rgb(39, 39, 39);
+  background-color: rgb(65, 65, 65);
 }
 
 .green {
@@ -69,4 +71,27 @@
 
 .orange {
   background-color: rgb(255, 115, 64);
+}
+
+/* Titles */
+h1 {
+  font-family: monospace;
+  font-size: 4rem;
+  font-weight: 900;
+  text-align: center;
+  color: blue; /* Fallback solid color */
+  -webkit-text-fill-color: transparent; /* Webkit Disable Fallback */
+
+  /* Text color gradient properties */
+  background: -webkit-linear-gradient(rgb(185, 49, 15), rgb(255, 237, 72));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h2 {
+  font-family: monospace;
+  font-size: 2rem;
+  font-weight: 500;
+  color: grey;
+  text-align: center;
 }
