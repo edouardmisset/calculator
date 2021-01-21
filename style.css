@@ -64,6 +64,9 @@ body {
 }
 
 /* COLORS */
+.white {
+  background-color: rgb(243, 243, 243);
+}
 
 .dark {
   background-color: rgb(65, 65, 65);
@@ -97,7 +100,7 @@ h1 {
   font-size: 4rem;
   font-weight: 900;
   text-align: center;
-  color: blue; /* Fallback solid color */
+  color: rgb(255, 136, 0); /* Fallback solid color */
   -webkit-text-fill-color: transparent; /* Webkit Disable Fallback */
 
   /* Text color gradient properties */
@@ -113,4 +116,5 @@ h2 {
   color: grey;
   text-align: center;
   padding: 1rem 0px 2rem 0px;
+  text-shadow: 2px 2px 2px rgb(26, 26, 26);
 }
