@@ -1,7 +1,7 @@
 const screen = document.getElementById("screen");
-var a = "0",
+let a = "0",
   b = "",
-  result = "",
+  temp = "",
   variableIsA = true,
   isAddition = false,
   isSubstraction = false,
@@ -17,39 +17,31 @@ function clearOperation() {
 }
 
 function clearVariables() {
-  a = "";
-  b = "";
-  result = 0;
+  a = b = temp = "";
   variableIsA = true;
 }
 
 function memoryClear() {
   clearOperation();
   clearVariables();
-  display("");
+  display("0");
 }
 
 function switchVariable() {
   if (a !== "") {
     variableIsA = !variableIsA;
+  } else if (b === "") {
+    variableIsA = false;
   }
+  temp = "";
 }
 
 function assign(input) {
   // Assigning a value to 'a' (or 'b')
-  if (variableIsA) {
-    a = stringedDigits(a, input);
-    display(a);
-  } else {
-    b = stringedDigits(b, input);
-    display(b);
-  }
-
-  function stringedDigits(vari, input) {
-    vari = Number(vari + "" + input);
-    return vari;
-  }
-  console.log("a : " + a + " b : " + b);
+  temp = temp + "" + input;
+  variableIsA ? (a = Number(temp)) : (b = Number(temp));
+  display(temp);
+  console.log(`a : ${a} b : ${b} temp : ${temp} variableIsA : ${variableIsA}`);
 }
 
 function selectOperator(operator) {
@@ -69,25 +61,25 @@ function selectOperator(operator) {
       break;
   }
   switchVariable();
+  console.log(`a : ${a} b : ${b} temp : ${temp} variableIsA : ${variableIsA}`);
 }
 
 function doOperation(a, b) {
-  switchVariable();
-
   // We do the operation depending on the activated operator
   if (isAddition) {
-    result = a + b;
+    a = a + b;
   } else if (isSubstraction) {
-    result = a - b;
+    a = a - b;
   } else if (isMultiplication) {
-    result = a * b;
+    a = a * b;
   } else if (isDivision) {
-    result = a / b;
+    a = a / b;
   }
-  display(result);
-  a = result;
   b = "";
-  console.log("a : " + a + " b : " + b + " r : " + result);
+  temp = "";
+  switchVariable();
+  display(a);
+  console.log(`a : ${a} b : ${b} temp : ${temp} variableIsA : ${variableIsA}`);
 }
 
 function changeSign() {
