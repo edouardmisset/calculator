@@ -1,5 +1,5 @@
 const screen = document.getElementById("screen");
-var a = "",
+var a = "0",
   b = "",
   result = "",
   variableIsA = true,
