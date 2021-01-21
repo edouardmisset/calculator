@@ -1,6 +1,18 @@
+html,
+body,
+h1,
+h2 {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background: linear-gradient(to right, rgb(48, 103, 173), rgb(66, 179, 85));
+}
+
 .calculator {
   padding: 1rem;
-  margin: auto;
+  margin: 0px auto 20px;
   display: flex;
   flex-direction: column;
   max-width: 500px;
@@ -73,6 +85,12 @@
   background-color: rgb(255, 115, 64);
 }
 
+.shadow {
+  -moz-box-shadow: 3px 3px 5px 6px rgb(47, 47, 47);
+  -webkit-box-shadow: 3px 3px 5px 6px rgb(49, 49, 49);
+  box-shadow: 3px 3px 5px 6px rgb(42, 42, 42);
+}
+
 /* Titles */
 h1 {
   font-family: monospace;
@@ -94,4 +112,5 @@ h2 {
   font-weight: 500;
   color: grey;
   text-align: center;
+  padding: 1rem 0px 2rem 0px;
 }
