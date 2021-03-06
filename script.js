@@ -1,8 +1,8 @@
-const screen = document.getElementById("screen");
-let a = "0",
-  b = "",
-  temp = "",
-  variableIsA = true,
+const screen = document.getElementById('screen');
+let firstNumber = '0',
+  secondNumber = '',
+  temp = '',
+  variableIsFirstNumber = true,
   isAddition = false,
   isSubstraction = false,
   isMultiplication = false,
@@ -17,72 +17,80 @@ function clearOperation() {
 }
 
 function clearVariables() {
-  a = b = temp = "";
-  variableIsA = true;
+  firstNumber = secondNumber = temp = '';
+  variableIsFirstNumber = true;
 }
 
 function memoryClear() {
   clearOperation();
   clearVariables();
-  display("0");
+  display('0');
 }
 
 function switchVariable() {
-  if (a !== "") {
-    variableIsA = !variableIsA;
-  } else if (b === "") {
-    variableIsA = false;
+  if (firstNumber !== '') {
+    variableIsFirstNumber = !variableIsFirstNumber;
+  } else if (secondNumber === '') {
+    variableIsFirstNumber = false;
   }
-  temp = "";
+  temp = '';
 }
 
 function assign(input) {
-  // Assigning a value to 'a' (or 'b')
-  temp = temp + "" + input;
+  // Assigning value to 'a' (or 'b')
+  temp = temp + '' + input;
   display(temp);
-  variableIsA ? (a = Number(temp)) : (b = Number(temp));
-  console.log(`a : ${a} b : ${b} temp : ${temp} variableIsA : ${variableIsA}`);
+  variableIsFirstNumber
+    ? (firstNumber = Number(temp))
+    : (secondNumber = Number(temp));
+  console.log(
+    `first : ${firstNumber} second : ${secondNumber} temp : ${temp} variableIsFirst : ${variableIsFirstNumber}`
+  );
 }
 
 function selectOperator(operator) {
   // We declare the operation that we are going to carry out from the received operator
   switch (operator) {
-    case "+":
+    case '+':
       isAddition = true;
       break;
-    case "-":
+    case '-':
       isSubstraction = true;
       break;
-    case "x":
+    case 'x':
       isMultiplication = true;
       break;
-    case "÷":
+    case '÷':
       isDivision = true;
       break;
   }
   switchVariable();
-  console.log(`a : ${a} b : ${b} temp : ${temp} variableIsA : ${variableIsA}`);
+  console.log(
+    `first : ${firstNumber} second : ${secondNumber} temp : ${temp} variableIsFirst : ${variableIsFirstNumber}`
+  );
 }
 
 function doOperation(a, b) {
   // We do the operation depending on the activated operator
   if (isAddition) {
-    a = a + b;
+    a += b;
   } else if (isSubstraction) {
-    a = a - b;
+    a -= b;
   } else if (isMultiplication) {
-    a = a * b;
+    a *= b;
   } else if (isDivision) {
-    a = a / b;
+    a /= b;
   }
-  b = "";
-  temp = "";
+  b = '';
+  temp = '';
   switchVariable();
   display(a);
-  console.log(`a : ${a} b : ${b} temp : ${temp} variableIsA : ${variableIsA}`);
+  console.log(
+    `first : ${a} second : ${b} temp : ${temp} variableIsFirst : ${variableIsFirstNumber}`
+  );
 }
 
 function changeSign() {
-  a = -a;
-  display(a);
+  firstNumber = -firstNumber;
+  display(firstNumber);
 }
