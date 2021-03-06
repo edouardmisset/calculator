@@ -1,14 +1,29 @@
+html,
+body,
+h1,
+h2 {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background: linear-gradient(to right, var(--blue), var(--dark-green));
+  height: 100%;
+}
+
 .calculator {
   padding: 1rem;
+  margin: 40px auto 20px;
   display: flex;
   flex-direction: column;
   max-width: 500px;
+  height: 630px;
 }
 
 .screen {
-  margin: 10px 20px 40px 20px;
+  margin: 20px 20px 40px 20px;
   text-align: right;
-  color: rgba(34, 34, 34, 0.911);
+  color: var(--black);
   font-size: 4rem;
   padding: 2rem 2rem;
   min-height: 5rem;
@@ -30,7 +45,7 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(5, 1fr);
-  gap: 15px;
+  gap: 4%;
 }
 
 .tall {
@@ -40,7 +55,7 @@
 
 .btn {
   border: none;
-  color: rgb(228, 228, 228);
+  color: var(--white);
   font-size: 2rem;
   padding: 1rem;
 }
@@ -51,22 +66,71 @@
 
 /* COLORS */
 
+:root {
+  --main-color: #f06d06;
+  --green: hsl(74, 38%, 62%);
+  --dark-green: hsl(106, 75%, 55%);
+  --white: hsl(0, 0%, 95%);
+  --grey: hsl(0, 0%, 41%);
+  --dark: hsl(0, 0%, 18%);
+  --black: hsl(0, 0%, 8%);
+  --orange: hsl(16, 100%, 63%);
+  --red: rgb(185, 49, 15);
+  --yellow: rgb(255, 237, 72);
+  --blue: hsl(214, 87%, 59%);
+}
+
+.white {
+  background-color: var(--white);
+}
+
 .dark {
-  background-color: rgb(39, 39, 39);
+  background-color: var(--dark);
 }
 
 .green {
-  background-color: rgb(178, 195, 122);
+  background-color: var(--green);
 }
 
 .black {
-  background-color: rgb(47, 47, 47);
+  background-color: var(--black);
 }
 
 .grey {
-  background-color: dimgray;
+  background-color: var(--grey);
 }
 
 .orange {
-  background-color: rgb(255, 115, 64);
+  background-color: var(--orange);
+}
+
+.shadow {
+  -moz-box-shadow: 3px 3px 5px 6px var(--dark);
+  -webkit-box-shadow: 3px 3px 5px 6px var(--dark);
+  box-shadow: 3px 3px 5px 6px var(--dark);
+}
+
+/* Titles */
+h1 {
+  font-family: monospace;
+  font-size: 4rem;
+  font-weight: 900;
+  text-align: center;
+  color: var(--orange); /* Fallback solid color */
+  -webkit-text-fill-color: transparent; /* Webkit Disable Fallback */
+
+  /* Text color gradient properties */
+  background: -webkit-linear-gradient(var(--red), var(--yellow));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h2 {
+  font-family: monospace;
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--grey);
+  text-align: center;
+  padding: 1rem 0px 2rem 0px;
+  text-shadow: 2px 2px 2px var(--dark);
 }
