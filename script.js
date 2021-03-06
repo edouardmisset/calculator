@@ -93,7 +93,6 @@ function doOperation(firstNumber, secondNumber) {
   console.log(
     `first : ${firstNumber} second : ${secondNumber} temp : ${temp} variableIsFirst : ${variableIsFirstNumber}`
   );
-  return firstNumber;
 }
 
 function changeSign() {
