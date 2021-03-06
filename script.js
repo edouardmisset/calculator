@@ -48,9 +48,6 @@ function assign(input) {
   variableIsFirstNumber
     ? (firstNumber = Number(temp))
     : (secondNumber = Number(temp));
-  console.log(
-    `first : ${firstNumber} second : ${secondNumber} temp : ${temp} variableIsFirst : ${variableIsFirstNumber}`
-  );
 }
 
 function selectOperator(operator) {
@@ -70,9 +67,6 @@ function selectOperator(operator) {
       break;
   }
   switchVariable();
-  console.log(
-    `first : ${firstNumber} second : ${secondNumber} temp : ${temp} variableIsFirst : ${variableIsFirstNumber}`
-  );
 }
 
 function doOperation(a, b) {
@@ -91,9 +85,6 @@ function doOperation(a, b) {
   temp = '';
   switchVariable();
   display(firstNumber);
-  console.log(
-    `first : ${firstNumber} second : ${secondNumber} temp : ${temp} variableIsFirst : ${variableIsFirstNumber}`
-  );
 }
 
 function changeSign() {
