@@ -1,8 +1,17 @@
+<<<<<<< HEAD
 const screen = document.querySelector('#screen');
 let firstNumber = '0',
   secondNumber = '',
   temp = '',
   variableIsFirstNumber = true,
+=======
+const screen = document.getElementById("screen");
+
+let a = "0",
+  b = "",
+  result = "",
+  variableIsA = true,
+>>>>>>> main
   isAddition = false,
   isSubstraction = false,
   isMultiplication = false,
