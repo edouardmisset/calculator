@@ -75,17 +75,18 @@ function selectOperator(operator) {
   );
 }
 
-function doOperation(firstNumber, secondNumber) {
+function doOperation(a, b) {
   // We do the operation depending on the activated operator
   if (isAddition) {
-    firstNumber += secondNumber;
+    a += b;
   } else if (isSubstraction) {
-    firstNumber -= secondNumber;
+    a -= b;
   } else if (isMultiplication) {
-    firstNumber *= secondNumber;
+    a *= b;
   } else if (isDivision) {
-    firstNumber /= secondNumber;
+    a /= b;
   }
+  firstNumber = a;
   secondNumber = '';
   temp = '';
   switchVariable();
