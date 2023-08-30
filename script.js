@@ -1,93 +1,93 @@
-const screen = document.querySelector('#screen');
-let firstNumber = '0',
-  secondNumber = '',
-  temp = '',
-  variableIsFirstNumber = true,
-  isAddition = false,
-  isSubstraction = false,
-  isMultiplication = false,
-  isDivision = false;
+const screen = document.querySelector('#screen')
+let firstNumber = '0'
+let secondNumber = ''
+let temp = ''
+let variableIsFirstNumber = true
+let isAddition = false
+let isSubtraction = false
+let isMultiplication = false
+let isDivision = false
 
 function display(input) {
-  screen.innerHTML = input;
+  screen.value = input
 }
 
 function clearOperation() {
-  isAddition = false;
-  isSubstraction = false;
-  isMultiplication = false;
-  isDivision = false;
+  isAddition = false
+  isSubtraction = false
+  isMultiplication = false
+  isDivision = false
 }
 
 function clearVariables() {
-  firstNumber = '';
-  secondNumber = '';
-  temp = '';
-  variableIsFirstNumber = true;
+  firstNumber = ''
+  secondNumber = ''
+  temp = ''
+  variableIsFirstNumber = true
 }
 
 function memoryClear() {
-  clearOperation();
-  clearVariables();
-  display('0');
+  clearOperation()
+  clearVariables()
+  display('0')
 }
 
 function switchVariable() {
   if (firstNumber !== '') {
-    variableIsFirstNumber = !variableIsFirstNumber;
+    variableIsFirstNumber = !variableIsFirstNumber
   } else if (secondNumber === '') {
-    variableIsFirstNumber = false;
+    variableIsFirstNumber = false
   }
-  temp = '';
+  temp = ''
 }
 
 function assign(input) {
   // Assigning value to 'a' (or 'b')
-  temp += `${input}`;
-  display(temp);
+  temp += `${input}`
+  display(temp)
   variableIsFirstNumber
     ? (firstNumber = Number(temp))
-    : (secondNumber = Number(temp));
+    : (secondNumber = Number(temp))
 }
 
 function selectOperator(operator) {
   // We declare the operation that we are going to carry out from the received operator
   switch (operator) {
     case '+':
-      isAddition = true;
-      break;
+      isAddition = true
+      break
     case '-':
-      isSubstraction = true;
-      break;
+      isSubtraction = true
+      break
     case 'x':
-      isMultiplication = true;
-      break;
+      isMultiplication = true
+      break
     case '÷':
-      isDivision = true;
-      break;
+      isDivision = true
+      break
   }
-  switchVariable();
+  switchVariable()
 }
 
 function doOperation(a, b) {
   // We do the operation depending on the activated operator
   if (isAddition) {
-    a += b;
-  } else if (isSubstraction) {
-    a -= b;
+    a += b
+  } else if (isSubtraction) {
+    a -= b
   } else if (isMultiplication) {
-    a *= b;
+    a *= b
   } else if (isDivision) {
-    a /= b;
+    a /= b
   }
-  firstNumber = a;
-  secondNumber = '';
-  temp = '';
-  switchVariable();
-  display(firstNumber);
+  firstNumber = a
+  secondNumber = ''
+  temp = ''
+  switchVariable()
+  display(firstNumber)
 }
 
 function changeSign() {
-  firstNumber = -firstNumber;
-  display(firstNumber);
+  firstNumber = -firstNumber
+  display(firstNumber)
 }

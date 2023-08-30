@@ -7,61 +7,54 @@ h2 {
 }
 
 body {
-  background: linear-gradient(to right, var(--blue), var(--dark-green));
-  height: 100%;
+  background: linear-gradient(to bottom right, var(--blue), var(--dark-green));
+  height: 100dvh;
 }
 
 .calculator {
-  padding: 1rem;
-  margin: 40px auto 20px;
-  display: flex;
-  flex-direction: column;
+  margin: auto;
+  display: grid;
+  grid-template-areas:
+    'screen screen screen screen'
+    'screen screen screen screen'
+    'clear inverse divide multiply'
+    'seven eight nine add'
+    'four five six subtract'
+    'one two three equal'
+    'zero zero dot equal';
   max-width: 500px;
-  height: 630px;
+  border-radius: var(--border-radius);
 }
 
 .screen {
-  margin: 20px 20px 40px 20px;
+  border: none;
+  border-start-start-radius: var(--border-radius);
+  border-start-end-radius: var(--border-radius);
+  grid-area: screen;
   text-align: right;
   color: var(--black);
-  font-size: 4rem;
-  padding: 2rem 2rem;
-  min-height: 5rem;
+  font-size: 2rem;
+  padding: 2rem;
+  min-height: 4rem;
   font-family: monospace;
 }
 
-/* SHAPES  */
-.rounded {
-  border-radius: 20px;
-}
-
-.squared {
-  border-radius: 1px;
-}
-
-/* BUTTONS LAYOUT */
-.container {
-  margin: 20px;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(5, 1fr);
-  gap: 4%;
-}
-
-.tall {
-  grid-area: 4 / 4 / 6 / 5;
-  align-self: stretch;
-}
-
 .btn {
+  appearance: none;
   border: none;
   color: var(--white);
   font-size: 2rem;
   padding: 1rem;
 }
 
-.large {
-  grid-area: 5 / 1 / 6 / 3;
+.equal {
+  grid-area: equal;
+  border-end-end-radius: var(--border-radius);
+}
+
+.zero {
+  grid-area: zero;
+  border-end-start-radius: var(--border-radius);
 }
 
 /* COLORS */
@@ -78,6 +71,7 @@ body {
   --red: rgb(185, 49, 15);
   --yellow: rgb(255, 237, 72);
   --blue: hsl(214, 87%, 59%);
+  --border-radius: 1rem;
 }
 
 .white {
@@ -105,17 +99,19 @@ body {
 }
 
 .shadow {
-  -moz-box-shadow: 3px 3px 5px 6px var(--dark);
-  -webkit-box-shadow: 3px 3px 5px 6px var(--dark);
-  box-shadow: 3px 3px 5px 6px var(--dark);
+  box-shadow: 3px 3px 5px 0px var(--dark);
 }
 
 /* Titles */
-h1 {
+header {
   font-family: monospace;
-  font-size: 4rem;
+  font-size: 3em;
   font-weight: 900;
   text-align: center;
+
+  margin-block-start: 1em;
+  margin-block-end: 2em;
+
   color: var(--orange); /* Fallback solid color */
   -webkit-text-fill-color: transparent; /* Webkit Disable Fallback */
 
