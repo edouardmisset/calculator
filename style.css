@@ -44,7 +44,8 @@ body {
   border: none;
   color: var(--white);
   font-size: 2rem;
-  padding: 1rem;
+  padding-inline: 0.5rem;
+  padding-block: 1rem;
 }
 
 .equal {
