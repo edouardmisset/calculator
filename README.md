@@ -1,8 +1,27 @@
-# React + Vite
+# Calculator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+The classical Calculator app in JS
 
-Currently, two official plugins are available:
+## Step 1: HTML + CSS + JS
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Convert to **ReactJS** + **Styled Components**
+
+## Add **Typescript** & **zod** + [Bonus] Use `react-toastify` to display the result or an error id the computation could not be carried out
+
+## **Deploy** to Github using `gh-pages`
+
+## Write unit tests, E2E & visual regression tests
+
+### Unit test for the simple functions (add, divide, subtract, multiply) **Happy** path + **unhappy** path
+
+### **E2E** : Use [`cypress`](https://www.cypress.io/) to mock a user pushing the calculator buttonand check the displayed result. + test **unhappy** path
+
+### Visual regression: Use snapshots [`vitest`](https://vitest.dev/guide/snapshot.html#use-snapshots) + [RTL](https://testing-library.com/docs/react-testing-library/intro/)
+
+## **CI / CD**
+
+## **Tooling**: ESLint (with AirBnB preset) + Prettier (with at least one custom rule)
+
+## Log an **issue**, create a **MR**, correct it and auto redeploy
+
+## Create a project **template** from this one
