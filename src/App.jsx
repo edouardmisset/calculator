@@ -22,12 +22,6 @@ const INDEX_TO_WORD = [
 
 const topRow = new Set(['+/-', 'C', '/', '*'])
 
-const numberButtons = INDEX_TO_WORD.map((text, index) => ({
-  position: text,
-  value: index,
-  text: index,
-}))
-
 function App() {
   const [firstNumber, setFirstNumber] = useState(initialFirstNumber)
   const [secondNumber, setSecondNumber] = useState(initialSecondNumber)
@@ -116,6 +110,13 @@ function App() {
     { position: 'dot', value: '.', text: '.', handler: handleNumberClick },
   ]
 
+  const numberButtons = INDEX_TO_WORD.map((text, index) => ({
+    position: text,
+    value: index,
+    text: index,
+    handler: handleNumberClick,
+  }))
+
   const buttons = [...numberButtons, ...functionButtons]
 
   return (
@@ -125,7 +126,6 @@ function App() {
       </header>
       <StyledCalculator>
         <StyledScreen value={screenValue} readOnly />
-
         {buttons.map(({ value, position, text, handler }) => (
           <StyledButton
             isZero={value === 0}
@@ -139,61 +139,6 @@ function App() {
             {text}
           </StyledButton>
         ))}
-
-        <StyledButton isTopRow onClick={handleClear}>
-          C
-        </StyledButton>
-        <StyledButton isTopRow onClick={changeSign}>
-          +/-
-        </StyledButton>
-        <StyledButton isTopRow onClick={handleOperatorClick} value="/">
-          ÷
-        </StyledButton>
-        <StyledButton isTopRow onClick={handleOperatorClick} value="*">
-          x
-        </StyledButton>
-        <StyledButton value={7} onClick={handleNumberClick}>
-          7
-        </StyledButton>
-        <StyledButton value={8} onClick={handleNumberClick}>
-          8
-        </StyledButton>
-        <StyledButton value={9} onClick={handleNumberClick}>
-          9
-        </StyledButton>
-        <StyledButton onClick={handleOperatorClick} value="-">
-          -
-        </StyledButton>
-        <StyledButton value={4} onClick={handleNumberClick}>
-          4
-        </StyledButton>
-        <StyledButton value={5} onClick={handleNumberClick}>
-          5
-        </StyledButton>
-        <StyledButton value={6} onClick={handleNumberClick}>
-          6
-        </StyledButton>
-        <StyledButton onClick={handleOperatorClick} value="+">
-          +
-        </StyledButton>
-        <StyledButton value={1} onClick={handleNumberClick}>
-          1
-        </StyledButton>
-        <StyledButton value={2} onClick={handleNumberClick}>
-          2
-        </StyledButton>
-        <StyledButton value={3} onClick={handleNumberClick}>
-          3
-        </StyledButton>
-        <StyledButton isEqual onClick={handleCalculate}>
-          =
-        </StyledButton>
-        <StyledButton isZero value={0} onClick={handleNumberClick}>
-          0
-        </StyledButton>
-        <StyledButton value="." onClick={handleNumberClick}>
-          .
-        </StyledButton>
       </StyledCalculator>
     </>
   )
