@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import './App.css'
 import { calculate, concatenatePreviousValueAndNext } from './helpers'
+import { StyledButton } from './styles'
 
 const initialScreenValue = ''
 const initialFirstNumber = ''
@@ -186,13 +187,14 @@ function App() {
         <button className="btn orange equal" onClick={handleCalculate}>
           =
         </button>
-        <button
+        <StyledButton
           className="btn grey zero"
           value={0}
           onClick={handleNumberClick}
+          isZero
         >
           0
-        </button>
+        </StyledButton>
         <button
           className="btn grey"
           value="."
