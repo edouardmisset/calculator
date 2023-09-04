@@ -1,51 +1,16 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
   <title>Awesome Calculator 🔥</title>
 </head>
 
 <body>
-  <header>
-    <h1>Awesome Calculator 🔥</h1>
-  </header>
-  <section class="calculator dark shadow">
-    <input class="screen green" id="screen"></input>
-    <button class="secondary btn black" onclick="memoryClear()">
-      MC
-    </button>
-    <button class="secondary btn black" onclick="changeSign()">
-      +/-
-    </button>
-    <button class="secondary btn black" onclick="selectOperator('÷')">
-      ÷
-    </button>
-    <button class="secondary btn black" onclick="selectOperator('x')">
-      x
-    </button>
-    <button class="primary btn grey" onclick="assign(7)">7</button>
-    <button class="primary btn grey" onclick="assign(8)">8</button>
-    <button class="primary btn grey" onclick="assign(9)">9</button>
-    <button class="primary btn grey" onclick="selectOperator('-')">
-      -
-    </button>
-    <button class="primary btn grey" onclick="assign(4)">4</button>
-    <button class="primary btn grey" onclick="assign(5)">5</button>
-    <button class="primary btn grey" onclick="assign(6)">6</button>
-    <button class="primary btn grey" onclick="selectOperator('+')">
-      +
-    </button>
-    <button class="primary btn grey" onclick="assign(1)">1</button>
-    <button class="primary btn grey" onclick="assign(2)">2</button>
-    <button class="primary btn grey" onclick="assign(3)">3</button>
-    <button class="primary btn orange equal" onclick="doOperation(firstNumber, secondNumber)"> = </button>
-    <button class="primary btn grey zero" onclick="assign(0)"> 0 </button>
-    <button class="primary btn grey" onclick="assign('.')"> . </button>
-  </section>
-  <script src="script.js"></script>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
 </body>
 
 </html>
