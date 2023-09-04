@@ -88,6 +88,6 @@ function doOperation(a, b) {
 }
 
 function changeSign() {
-  firstNumber = -firstNumber
-  display(firstNumber)
+  firstNumber = -1 * Number(firstNumber)
+  display(firstNumber.toString())
 }
