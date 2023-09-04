@@ -27,38 +27,6 @@
   -webkit-text-size-adjust: 100%;
 }
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: var(--main-color);
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
 html,
 body,
 h1,
@@ -68,8 +36,13 @@ h2 {
 }
 
 body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: linear-gradient(to bottom right, var(--blue), var(--dark-green));
+  min-width: 500px;
   height: 100dvh;
+  min-height: 100dvh;
 }
 
 #root {
@@ -79,11 +52,14 @@ body {
   height: 100%;
 }
 
+h1 {
+  font-size: 5em;
+  line-height: 1;
+}
+
 header {
   font-family: monospace;
-  font-size: 2em;
   font-weight: 900;
-  text-align: center;
 
   margin-block-start: 1em;
   margin-block-end: 2em;
@@ -98,61 +74,10 @@ header {
   background-clip: text;
 }
 
-.calculator {
-  margin: auto;
-  display: grid;
-  grid-template-areas:
-    'screen screen screen screen'
-    'screen screen screen screen'
-    'clear inverse divide multiply'
-    'seven eight nine add'
-    'four five six subtract'
-    'one two three equal'
-    'zero zero dot equal';
-  max-width: 500px;
-  border-radius: var(--border-radius);
-}
-
-.screen {
-  border: none;
-  border-start-start-radius: var(--border-radius);
-  border-start-end-radius: var(--border-radius);
-  grid-area: screen;
-  text-align: right;
-  color: var(--black);
-  font-size: 2rem;
-  padding: 2rem;
-  min-height: 4rem;
-  font-family: monospace;
-}
-
-.btn {
-  appearance: none;
-  border-radius: 0;
-  color: var(--white);
-  font-size: 2rem;
-  padding-inline: 0.5rem;
-  padding-block: 1rem;
-}
-
-.equal {
-  grid-area: equal;
-  border-end-end-radius: var(--border-radius);
-}
-
-.zero {
-  grid-area: zero;
-  border-end-start-radius: var(--border-radius);
-}
-
 /* COLORS */
 
 .white {
   background-color: var(--white);
-}
-
-.dark {
-  background-color: var(--dark);
 }
 
 .green {
@@ -169,8 +94,4 @@ header {
 
 .orange {
   background-color: var(--orange);
-}
-
-.shadow {
-  box-shadow: 3px 3px 5px 0px var(--dark-grey);
 }

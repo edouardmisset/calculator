@@ -1,10 +1,32 @@
 import { useEffect, useState } from 'react'
 import './App.css'
 import { calculate, concatenatePreviousValueAndNext } from './helpers'
+import { StyledButton, StyledCalculator, StyledScreen } from './styles'
 
 const initialScreenValue = ''
 const initialFirstNumber = ''
 const initialSecondNumber = ''
+
+const INDEX_TO_WORD = [
+  'zero',
+  'one',
+  'two',
+  'three',
+  'four',
+  'five',
+  'six',
+  'seven',
+  'eight',
+  'nine',
+]
+
+const topRow = new Set(['+/-', 'C', '/', '*'])
+
+const numberButtons = INDEX_TO_WORD.map((text, index) => ({
+  position: text,
+  value: index,
+  text: index,
+}))
 
 function App() {
   const [firstNumber, setFirstNumber] = useState(initialFirstNumber)
@@ -12,6 +34,14 @@ function App() {
   const [isFirstNumberSelected, setIsFirstNumberSelected] = useState(true)
   const [operator, setOperator] = useState()
   const [screenValue, setScreenValue] = useState(initialScreenValue)
+
+  const changeSign = () => {
+    if (isFirstNumberSelected) {
+      setFirstNumber(previousValue => -previousValue)
+    } else {
+      setSecondNumber(previousValue => -previousValue)
+    }
+  }
 
   const handleNumberClick = event => {
     const value = event?.target?.value
@@ -65,142 +95,106 @@ function App() {
     setIsFirstNumberSelected(true)
   }
 
-  const changeSign = () => {
-    if (isFirstNumberSelected) {
-      setFirstNumber(previousValue => -previousValue)
-    } else {
-      setSecondNumber(previousValue => -previousValue)
-    }
-  }
+  const functionButtons = [
+    { position: 'inverse', value: '+/-', text: '+/-', handler: changeSign },
+    { position: 'clear', value: 'C', text: 'C', handler: handleClear },
+    { position: 'divide', value: '/', text: '÷', handler: handleOperatorClick },
+    {
+      position: 'multiply',
+      value: '*',
+      text: 'x',
+      handler: handleOperatorClick,
+    },
+    { position: 'add', value: '+', text: '+', handler: handleOperatorClick },
+    {
+      position: 'subtract',
+      value: '-',
+      text: '-',
+      handler: handleOperatorClick,
+    },
+    { position: 'equal', value: '=', text: '=', handler: handleCalculate },
+    { position: 'dot', value: '.', text: '.', handler: handleNumberClick },
+  ]
+
+  const buttons = [...numberButtons, ...functionButtons]
 
   return (
     <>
       <header>
         <h1>Awesome Calculator 🔥</h1>
       </header>
-      <section className="calculator dark shadow">
-        <input
-          className="screen green"
-          id="screen"
-          value={screenValue}
-          readOnly
-        />
+      <StyledCalculator>
+        <StyledScreen value={screenValue} readOnly />
 
-        <button className="secondary btn black" onClick={handleClear}>
+        {buttons.map(({ value, position, text, handler }) => (
+          <StyledButton
+            isZero={value === 0}
+            isEqual={value === '='}
+            onClick={handler}
+            isTopRow={topRow.has(value)}
+            key={value}
+            position={position}
+            value={value}
+          >
+            {text}
+          </StyledButton>
+        ))}
+
+        <StyledButton isTopRow onClick={handleClear}>
           C
-        </button>
-        <button className="secondary btn black" onClick={changeSign}>
+        </StyledButton>
+        <StyledButton isTopRow onClick={changeSign}>
           +/-
-        </button>
-        <button
-          className="secondary btn black"
-          onClick={handleOperatorClick}
-          value="/"
-        >
+        </StyledButton>
+        <StyledButton isTopRow onClick={handleOperatorClick} value="/">
           ÷
-        </button>
-        <button
-          className="secondary btn black"
-          onClick={handleOperatorClick}
-          value="*"
-        >
+        </StyledButton>
+        <StyledButton isTopRow onClick={handleOperatorClick} value="*">
           x
-        </button>
-        <button
-          className="btn grey"
-          value={7}
-          onClick={handleNumberClick}
-        >
+        </StyledButton>
+        <StyledButton value={7} onClick={handleNumberClick}>
           7
-        </button>
-        <button
-          className="btn grey"
-          value={8}
-          onClick={handleNumberClick}
-        >
+        </StyledButton>
+        <StyledButton value={8} onClick={handleNumberClick}>
           8
-        </button>
-        <button
-          className="btn grey"
-          value={9}
-          onClick={handleNumberClick}
-        >
+        </StyledButton>
+        <StyledButton value={9} onClick={handleNumberClick}>
           9
-        </button>
-        <button
-          className="btn grey"
-          onClick={handleOperatorClick}
-          value="-"
-        >
+        </StyledButton>
+        <StyledButton onClick={handleOperatorClick} value="-">
           -
-        </button>
-        <button
-          className="btn grey"
-          value={4}
-          onClick={handleNumberClick}
-        >
+        </StyledButton>
+        <StyledButton value={4} onClick={handleNumberClick}>
           4
-        </button>
-        <button
-          className="btn grey"
-          value={5}
-          onClick={handleNumberClick}
-        >
+        </StyledButton>
+        <StyledButton value={5} onClick={handleNumberClick}>
           5
-        </button>
-        <button
-          className="btn grey"
-          value={6}
-          onClick={handleNumberClick}
-        >
+        </StyledButton>
+        <StyledButton value={6} onClick={handleNumberClick}>
           6
-        </button>
-        <button
-          className="btn grey"
-          onClick={handleOperatorClick}
-          value="+"
-        >
+        </StyledButton>
+        <StyledButton onClick={handleOperatorClick} value="+">
           +
-        </button>
-        <button
-          className="btn grey"
-          value={1}
-          onClick={handleNumberClick}
-        >
+        </StyledButton>
+        <StyledButton value={1} onClick={handleNumberClick}>
           1
-        </button>
-        <button
-          className="btn grey"
-          value={2}
-          onClick={handleNumberClick}
-        >
+        </StyledButton>
+        <StyledButton value={2} onClick={handleNumberClick}>
           2
-        </button>
-        <button
-          className="btn grey"
-          value={3}
-          onClick={handleNumberClick}
-        >
+        </StyledButton>
+        <StyledButton value={3} onClick={handleNumberClick}>
           3
-        </button>
-        <button className="btn orange equal" onClick={handleCalculate}>
+        </StyledButton>
+        <StyledButton isEqual onClick={handleCalculate}>
           =
-        </button>
-        <button
-          className="btn grey zero"
-          value={0}
-          onClick={handleNumberClick}
-        >
+        </StyledButton>
+        <StyledButton isZero value={0} onClick={handleNumberClick}>
           0
-        </button>
-        <button
-          className="btn grey"
-          value="."
-          onClick={handleNumberClick}
-        >
+        </StyledButton>
+        <StyledButton value="." onClick={handleNumberClick}>
           .
-        </button>
-      </section>
+        </StyledButton>
+      </StyledCalculator>
     </>
   )
 }
