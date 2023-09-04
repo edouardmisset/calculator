@@ -73,25 +73,3 @@ header {
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
-
-/* COLORS */
-
-.white {
-  background-color: var(--white);
-}
-
-.green {
-  background-color: var(--green);
-}
-
-.black {
-  background-color: var(--black);
-}
-
-.grey {
-  background-color: var(--grey);
-}
-
-.orange {
-  background-color: var(--orange);
-}
