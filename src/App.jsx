@@ -107,94 +107,94 @@ function App() {
           x
         </button>
         <button
-          className="primary btn grey"
+          className="btn grey"
           value={7}
           onClick={handleNumberClick}
         >
           7
         </button>
         <button
-          className="primary btn grey"
+          className="btn grey"
           value={8}
           onClick={handleNumberClick}
         >
           8
         </button>
         <button
-          className="primary btn grey"
+          className="btn grey"
           value={9}
           onClick={handleNumberClick}
         >
           9
         </button>
         <button
-          className="primary btn grey"
+          className="btn grey"
           onClick={handleOperatorClick}
           value="-"
         >
           -
         </button>
         <button
-          className="primary btn grey"
+          className="btn grey"
           value={4}
           onClick={handleNumberClick}
         >
           4
         </button>
         <button
-          className="primary btn grey"
+          className="btn grey"
           value={5}
           onClick={handleNumberClick}
         >
           5
         </button>
         <button
-          className="primary btn grey"
+          className="btn grey"
           value={6}
           onClick={handleNumberClick}
         >
           6
         </button>
         <button
-          className="primary btn grey"
+          className="btn grey"
           onClick={handleOperatorClick}
           value="+"
         >
           +
         </button>
         <button
-          className="primary btn grey"
+          className="btn grey"
           value={1}
           onClick={handleNumberClick}
         >
           1
         </button>
         <button
-          className="primary btn grey"
+          className="btn grey"
           value={2}
           onClick={handleNumberClick}
         >
           2
         </button>
         <button
-          className="primary btn grey"
+          className="btn grey"
           value={3}
           onClick={handleNumberClick}
         >
           3
         </button>
-        <button className="primary btn orange equal" onClick={handleCalculate}>
+        <button className="btn orange equal" onClick={handleCalculate}>
           =
         </button>
         <button
-          className="primary btn grey zero"
+          className="btn grey zero"
           value={0}
           onClick={handleNumberClick}
         >
           0
         </button>
         <button
-          className="primary btn grey"
+          className="btn grey"
           value="."
           onClick={handleNumberClick}
         >
