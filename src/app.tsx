@@ -26,7 +26,8 @@ function App() {
   }
 
   const handleNumberClick: MouseEventHandler<HTMLButtonElement> = event => {
-    const value = (event.target as HTMLButtonElement).value
+    if (!(event.target instanceof HTMLButtonElement)) return
+    const value = event.target.value
     if (value === undefined) return
     const setNumber = concatenatePreviousValueAndNext(value)
     if (isFirstNumberSelected === true) {
@@ -39,7 +40,8 @@ function App() {
   }
 
   const handleOperatorClick: MouseEventHandler<HTMLButtonElement> = event => {
-    const op = (event.target as HTMLButtonElement).value
+    if (!(event.target instanceof HTMLButtonElement)) return
+    const op = event.target.value
     if (op === undefined) {
       console.log('No operator')
       return
