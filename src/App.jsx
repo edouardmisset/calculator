@@ -116,12 +116,12 @@ function App() {
         <StyledScreen value={screenValue} readOnly />
         {buttons.map(({ value, position, text, handler }) => (
           <StyledButton
-            isZero={value === 0}
-            isEqual={value === '='}
+            $isZero={value === 0}
+            $isEqual={value === '='}
             onClick={handler}
-            isTopRow={topRow.has(value)}
+            $isTopRow={topRow.has(value)}
             key={value}
-            position={position}
+            $position={position}
             value={value}
           >
             {text}

@@ -2,10 +2,10 @@ import styled, { css } from 'styled-components'
 
 export const StyledButton = styled.button`
   ${({
-  isZero,
-  isEqual,
-  isTopRow,
-  position
+  $isZero,
+  $isEqual,
+  $isTopRow,
+  $position
 }) => css`
     appearance: none;
     border: 1px solid transparent;
@@ -17,7 +17,7 @@ export const StyledButton = styled.button`
     background-color: #1a1a1a;
     cursor: pointer;
     transition: border-color 0.3s;
-    background-color: ${isEqual ? 'var(--main-color)' : isTopRow ? 'var(--black)' : 'var(--grey)'};
+    background-color: ${$isEqual ? 'var(--main-color)' : $isTopRow ? 'var(--black)' : 'var(--grey)'};
     &:hover {
       border-color: var(--main-color);
     }
@@ -26,20 +26,20 @@ export const StyledButton = styled.button`
       outline: 4px auto -webkit-focus-ring-color;
     }
 
-    ${isZero
+    ${$isZero
     ? css`
           border-end-start-radius: var(--border-radius);
         `
     : ''}
 
-    ${isEqual
+    ${$isEqual
     ? css`
           border-end-end-radius: var(--border-radius);
           background-color: var(--main-color);
         `
     : ''}
 
-    grid-area: ${position};
+    grid-area: ${$position};
 `}
 `
 
