@@ -24,4 +24,4 @@ export const calculate = (leftValue, operation, rightValue) => {
 }
 
 export const concatenatePreviousValueAndNext = value => previousValue =>
-  Number(`${previousValue}${value}`).toString()
+  `${previousValue}${value}`.trim()

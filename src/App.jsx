@@ -2,8 +2,13 @@ import { useEffect, useState } from 'react'
 import './App.css'
 import { calculate, concatenatePreviousValueAndNext } from './helpers'
 import { StyledButton, StyledCalculator, StyledScreen } from './styles'
-import { INDEX_TO_WORD, initialFirstNumber, initialSecondNumber, topRow, initialScreenValue } from './constants'
-
+import {
+  INDEX_TO_WORD,
+  initialFirstNumber,
+  initialSecondNumber,
+  topRow,
+  initialScreenValue,
+} from './constants'
 
 function App() {
   const [firstNumber, setFirstNumber] = useState(initialFirstNumber)
