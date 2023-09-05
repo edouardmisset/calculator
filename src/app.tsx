@@ -39,6 +39,9 @@ function App() {
     }
   }
 
+  const toggleSelectedNumber: VoidFunction = () =>
+    setIsFirstNumberSelected(state => !state)
+
   const handleOperatorClick: MouseEventHandler<HTMLButtonElement> = event => {
     if (!(event.target instanceof HTMLButtonElement)) return
     const op = event.target.value
@@ -47,7 +50,7 @@ function App() {
       return
     }
     setOperator(op)
-    setIsFirstNumberSelected(state => !state)
+    toggleSelectedNumber()
   }
 
   const handleCalculate: VoidFunction = () => {
@@ -59,7 +62,7 @@ function App() {
     setScreenValue(result)
     setSecondNumber('')
     setFirstNumber(result)
-    setIsFirstNumberSelected(state => !state)
+    toggleSelectedNumber()
   }
 
   const handleClear: VoidFunction = () => {
