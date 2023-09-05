@@ -1,6 +1,6 @@
 import { Operator } from "./types"
 
-const operationRegEx = /[+\-*/%^]/gi
+const operationRegEx = /[\+\-\*/%^]/
 
 export const calculate = (leftValue: number, operator: Operator, rightValue: number): number => {
   if (!operationRegEx.test(operator)) {
@@ -12,11 +12,12 @@ export const calculate = (leftValue: number, operator: Operator, rightValue: num
     case '-':
       return leftValue - rightValue
     case '/':
+      if (rightValue === 0) throw new Error("Cannot divide by 0")
       return leftValue / rightValue
     case '*':
       return leftValue * rightValue
     case '%':
-      return leftValue % rightValue
+      return ((leftValue < 0 ? -1 : 1) * leftValue) % rightValue
     case '^':
       return leftValue ** rightValue
     default:
