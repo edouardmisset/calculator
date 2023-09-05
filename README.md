@@ -6,7 +6,7 @@ The classical Calculator app in JS
 
 ## Convert to **ReactJS** + **Styled Components**
 
-## Add **Typescript** & **zod** + [Bonus] Use `react-toastify` to display the result or an error id the computation could not be carried out
+## Add **Typescript** & **zod** + [Bonus] Use `react-toastify` to display the result or an error if the computation could not be carried out
 
 ## **Deploy** to Github using `gh-pages`
 
