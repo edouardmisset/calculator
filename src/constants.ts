@@ -13,6 +13,6 @@ export const INDEX_TO_WORD = [
   'seven',
   'eight',
   'nine',
-]
+] as const
 
 export const topRow = new Set(['+/-', 'C', '/', '*'])

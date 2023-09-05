@@ -1,6 +1,13 @@
 import styled, { css } from 'styled-components'
 
-export const StyledButton = styled.button`
+interface ButtonProps {
+  $isZero: boolean
+  $isEqual: boolean
+  $isTopRow: boolean
+  $position: string
+}
+
+export const StyledButton = styled.button<ButtonProps>`
   ${({
   $isZero,
   $isEqual,

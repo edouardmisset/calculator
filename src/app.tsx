@@ -1,5 +1,5 @@
-import { useEffect, useState } from 'react'
-import './App.css'
+import { MouseEventHandler, useEffect, useState } from 'react'
+import './app.css'
 import { calculate, concatenatePreviousValueAndNext } from './helpers'
 import { StyledButton, StyledCalculator, StyledScreen } from './styles'
 import {
@@ -14,19 +14,19 @@ function App() {
   const [firstNumber, setFirstNumber] = useState(initialFirstNumber)
   const [secondNumber, setSecondNumber] = useState(initialSecondNumber)
   const [isFirstNumberSelected, setIsFirstNumberSelected] = useState(true)
-  const [operator, setOperator] = useState()
+  const [operator, setOperator] = useState<string>()
   const [screenValue, setScreenValue] = useState(initialScreenValue)
 
   const changeSign = () => {
     if (isFirstNumberSelected) {
-      setFirstNumber(previousValue => -previousValue)
+      setFirstNumber(previousValue => (-1 * Number(previousValue)).toString())
     } else {
-      setSecondNumber(previousValue => -previousValue)
+      setSecondNumber(previousValue => (-1 * Number(previousValue)).toString())
     }
   }
 
-  const handleNumberClick = event => {
-    const value = event?.target?.value
+  const handleNumberClick: MouseEventHandler<HTMLButtonElement> = event => {
+    const value = (event.target as HTMLButtonElement).value
     if (value === undefined) return
     const setNumber = concatenatePreviousValueAndNext(value)
     if (isFirstNumberSelected === true) {
@@ -38,8 +38,8 @@ function App() {
     }
   }
 
-  const handleOperatorClick = event => {
-    const op = event?.target?.value
+  const handleOperatorClick: MouseEventHandler<HTMLButtonElement> = event => {
+    const op = (event.target as HTMLButtonElement).value
     if (op === undefined) {
       console.log('No operator')
       return
@@ -64,7 +64,7 @@ function App() {
     setScreenValue('')
     setFirstNumber('')
     setSecondNumber('')
-    setOperator()
+    setOperator(undefined)
     setIsFirstNumberSelected(true)
   }
 
@@ -119,7 +119,7 @@ function App() {
             $isZero={value === 0}
             $isEqual={value === '='}
             onClick={handler}
-            $isTopRow={topRow.has(value)}
+            $isTopRow={topRow.has(value.toString())}
             key={value}
             $position={position}
             value={value}
