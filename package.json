@@ -10,7 +10,10 @@
     "dev": "vite",
     "lint": "eslint . --ext js,jsx,ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "test": "vitest"
+    "test": "vitest",
+    "test:e2e": "yarn run cypress run",
+    "test:all": "yarn run test && yarn run test:e2e",
+    "cypress:open": "cypress open"
   },
   "dependencies": {
     "react": "^18.2.0",
@@ -23,6 +26,7 @@
     "@types/react": "^18.2.21",
     "@types/react-dom": "^18.2.7",
     "@vitejs/plugin-react": "^4.0.3",
+    "cypress": "^13.1.0",
     "eslint": "^8.45.0",
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
