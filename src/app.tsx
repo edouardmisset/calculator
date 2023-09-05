@@ -123,7 +123,7 @@ function App() {
       <header>
         <h1>Awesome Calculator 🔥</h1>
       </header>
-      <StyledCalculator>
+      <StyledCalculator data-testid="calculator">
         <StyledScreen value={screenValue} readOnly />
         {buttons.map(({ value, position, text, handler }) => (
           <StyledButton

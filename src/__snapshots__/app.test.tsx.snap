@@ -1,0 +1,122 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`App > Loads and displays the calculator 1`] = `
+<section
+  class="sc-dkjKgF inKwHB"
+  data-testid="calculator"
+>
+  <input
+    class="sc-grXZZQ hThYk"
+    readonly=""
+    value=""
+  />
+  <button
+    class="sc-bcPKhP geyMLv"
+    value="0"
+  >
+    0
+  </button>
+  <button
+    class="sc-bcPKhP edHtyf"
+    value="1"
+  >
+    1
+  </button>
+  <button
+    class="sc-bcPKhP bWNlFb"
+    value="2"
+  >
+    2
+  </button>
+  <button
+    class="sc-bcPKhP kEbZyV"
+    value="3"
+  >
+    3
+  </button>
+  <button
+    class="sc-bcPKhP jyqQSp"
+    value="4"
+  >
+    4
+  </button>
+  <button
+    class="sc-bcPKhP cGxMSD"
+    value="5"
+  >
+    5
+  </button>
+  <button
+    class="sc-bcPKhP dxJCEB"
+    value="6"
+  >
+    6
+  </button>
+  <button
+    class="sc-bcPKhP fArLak"
+    value="7"
+  >
+    7
+  </button>
+  <button
+    class="sc-bcPKhP gOWIbs"
+    value="8"
+  >
+    8
+  </button>
+  <button
+    class="sc-bcPKhP dnfZgv"
+    value="9"
+  >
+    9
+  </button>
+  <button
+    class="sc-bcPKhP dibRmp"
+    value="+/-"
+  >
+    +/-
+  </button>
+  <button
+    class="sc-bcPKhP jKgmDc"
+    value="C"
+  >
+    C
+  </button>
+  <button
+    class="sc-bcPKhP dddkFG"
+    value="/"
+  >
+    ÷
+  </button>
+  <button
+    class="sc-bcPKhP ehBvDF"
+    value="*"
+  >
+    x
+  </button>
+  <button
+    class="sc-bcPKhP gfDgci"
+    value="+"
+  >
+    +
+  </button>
+  <button
+    class="sc-bcPKhP iOkHfr"
+    value="-"
+  >
+    -
+  </button>
+  <button
+    class="sc-bcPKhP dyqFWW"
+    value="="
+  >
+    =
+  </button>
+  <button
+    class="sc-bcPKhP bGQXbQ"
+    value="."
+  >
+    .
+  </button>
+</section>
+`;

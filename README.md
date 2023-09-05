@@ -22,9 +22,9 @@ The classical Calculator app in JS
 
 - [x] Write **unit test** for the simple functions (add, divide, subtract, multiply) **Happy** path + **unhappy** path
 
-- [ ] **E2E** : Use [`cypress`](https://www.cypress.io/) to mock a user using the calculator (clicking) buttons and reading the displayed result. + test **unhappy** path
+- [x] **E2E** : Use [`cypress`](https://www.cypress.io/) to mock a user using the calculator (clicking) buttons and reading the displayed result. + test **unhappy** path
 
-- [ ] **Visual regression**: Use snapshots [`vitest`](https://vitest.dev/guide/snapshot.html#use-snapshots) + [RTL](https://testing-library.com/docs/react-testing-library/intro/)
+- [x] **Visual regression**: Use snapshots [`vitest`](https://vitest.dev/guide/snapshot.html#use-snapshots) + [RTL](https://testing-library.com/docs/react-testing-library/intro/)
 
 ## Step 6
 
