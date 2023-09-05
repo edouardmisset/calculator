@@ -2,25 +2,8 @@ import { useEffect, useState } from 'react'
 import './App.css'
 import { calculate, concatenatePreviousValueAndNext } from './helpers'
 import { StyledButton, StyledCalculator, StyledScreen } from './styles'
+import { INDEX_TO_WORD, initialFirstNumber, initialSecondNumber, topRow, initialScreenValue } from './constants'
 
-const initialScreenValue = ''
-const initialFirstNumber = ''
-const initialSecondNumber = ''
-
-const INDEX_TO_WORD = [
-  'zero',
-  'one',
-  'two',
-  'three',
-  'four',
-  'five',
-  'six',
-  'seven',
-  'eight',
-  'nine',
-]
-
-const topRow = new Set(['+/-', 'C', '/', '*'])
 
 function App() {
   const [firstNumber, setFirstNumber] = useState(initialFirstNumber)
@@ -49,15 +32,6 @@ function App() {
       setScreenValue(secondNumber)
     }
   }
-
-  useEffect(() => {
-    if (isFirstNumberSelected === true) {
-      setScreenValue(firstNumber)
-    } else {
-      setScreenValue(secondNumber)
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [firstNumber, secondNumber])
 
   const handleOperatorClick = event => {
     const op = event?.target?.value
@@ -118,6 +92,15 @@ function App() {
   }))
 
   const buttons = [...numberButtons, ...functionButtons]
+
+  useEffect(() => {
+    if (isFirstNumberSelected === true) {
+      setScreenValue(firstNumber)
+    } else {
+      setScreenValue(secondNumber)
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [firstNumber, secondNumber])
 
   return (
     <>
