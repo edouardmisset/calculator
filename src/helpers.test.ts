@@ -33,3 +33,10 @@ describe('Calculations', () => {
     expect(calculate(2, '^', 3)).toEqual(8)
   })
 })
+
+
+describe('Concatenate', () => {
+  it('should concatenate string', () => {
+    expect(concatenatePreviousValueAndNext('5')('5')).toEqual('55')
+  })
+})
