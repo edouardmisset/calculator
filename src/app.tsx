@@ -1,14 +1,14 @@
 import { MouseEventHandler, useEffect, useState } from 'react'
-import './app.css'
-import { calculate, concatenatePreviousValueAndNext } from './helpers'
-import { StyledButton, StyledCalculator, StyledScreen } from './styles'
 import {
   INDEX_TO_WORD,
   initialFirstNumber,
+  initialScreenValue,
   initialSecondNumber,
   topRow,
-  initialScreenValue,
 } from './constants'
+import './global-styles.css'
+import { calculate, concatenatePreviousValueAndNext } from './helpers'
+import { StyledButton, StyledCalculator, StyledScreen } from './styles'
 
 function App() {
   const [firstNumber, setFirstNumber] = useState(initialFirstNumber)
@@ -17,7 +17,7 @@ function App() {
   const [operator, setOperator] = useState<string>()
   const [screenValue, setScreenValue] = useState(initialScreenValue)
 
-  const changeSign = () => {
+  const changeSign: VoidFunction = () => {
     if (isFirstNumberSelected) {
       setFirstNumber(previousValue => (-1 * Number(previousValue)).toString())
     } else {
@@ -48,7 +48,7 @@ function App() {
     setIsFirstNumberSelected(state => !state)
   }
 
-  const handleCalculate = () => {
+  const handleCalculate: VoidFunction = () => {
     const result = calculate(
       Number(firstNumber),
       operator,
@@ -60,7 +60,7 @@ function App() {
     setIsFirstNumberSelected(state => !state)
   }
 
-  const handleClear = () => {
+  const handleClear: VoidFunction = () => {
     setScreenValue('')
     setFirstNumber('')
     setSecondNumber('')
@@ -87,7 +87,7 @@ function App() {
     },
     { position: 'equal', value: '=', text: '=', handler: handleCalculate },
     { position: 'dot', value: '.', text: '.', handler: handleNumberClick },
-  ]
+  ] as const
 
   const numberButtons = INDEX_TO_WORD.map((text, index) => ({
     position: text,
