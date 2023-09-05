@@ -1,10 +1,12 @@
-export const calculate = (leftValue, operation, rightValue) => {
-  const operationRegEx = /[+\-*/%^]/gi
-  if (!operationRegEx.test(operation)) {
-    console.log(`This sign (${operation}) is not valid`)
-    return
+import { Operator } from "./types"
+
+const operationRegEx = /[+\-*/%^]/gi
+
+export const calculate = (leftValue: number, operator: Operator, rightValue: number): number => {
+  if (!operationRegEx.test(operator)) {
+    throw new Error(`This sign (${operator}) is not valid`)
   }
-  switch (operation) {
+  switch (operator) {
     case '+':
       return leftValue + rightValue
     case '-':
@@ -18,10 +20,9 @@ export const calculate = (leftValue, operation, rightValue) => {
     case '^':
       return leftValue ** rightValue
     default:
-      console.log('Something unexpected happened')
-      break
+      throw new Error('Something unexpected happened')
   }
 }
 
-export const concatenatePreviousValueAndNext = value => previousValue =>
+export const concatenatePreviousValueAndNext = (value: string) => (previousValue: string): string =>
   `${previousValue}${value}`.trim()
