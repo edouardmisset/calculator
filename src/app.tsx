@@ -9,13 +9,16 @@ import {
 import './global-styles.css'
 import { calculate, concatenatePreviousValueAndNext } from './helpers'
 import { StyledButton, StyledCalculator, StyledScreen } from './styles'
+import { Operator, operatorSchema } from './types'
 
 function App() {
   const [firstNumber, setFirstNumber] = useState(initialFirstNumber)
   const [secondNumber, setSecondNumber] = useState(initialSecondNumber)
   const [isFirstNumberSelected, setIsFirstNumberSelected] = useState(true)
-  const [operator, setOperator] = useState<string>()
-  const [screenValue, setScreenValue] = useState(initialScreenValue)
+  const [operator, setOperator] = useState<Operator>()
+  const [screenValue, setScreenValue] = useState<number | string>(
+    initialScreenValue,
+  )
 
   const changeSign: VoidFunction = () => {
     if (isFirstNumberSelected) {
@@ -49,11 +52,14 @@ function App() {
       console.log('No operator')
       return
     }
-    setOperator(op)
+    const parsedOperator = operatorSchema.parse(op)
+    setOperator(parsedOperator)
     toggleSelectedNumber()
   }
 
   const handleCalculate: VoidFunction = () => {
+    if (operator === undefined) return
+
     const result = calculate(
       Number(firstNumber),
       operator,
@@ -61,7 +67,7 @@ function App() {
     )
     setScreenValue(result)
     setSecondNumber('')
-    setFirstNumber(result)
+    setFirstNumber(result.toString())
     toggleSelectedNumber()
   }
 
@@ -117,7 +123,7 @@ function App() {
       <header>
         <h1>Awesome Calculator 🔥</h1>
       </header>
-      <StyledCalculator>
+      <StyledCalculator data-testid="calculator">
         <StyledScreen value={screenValue} readOnly />
         {buttons.map(({ value, position, text, handler }) => (
           <StyledButton

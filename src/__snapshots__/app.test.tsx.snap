@@ -1,0 +1,581 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`App > Loads and displays the calculator 1`] = `
+.c2 {
+  appearance: none;
+  border: 1px solid transparent;
+  border-radius: 0;
+  color: var(--white);
+  padding-inline: 0.5rem;
+  padding-block: 1rem;
+  font-size: 2em;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.3s;
+  background-color: var(--grey);
+  border-end-start-radius: var(--border-radius);
+  grid-area: zero;
+}
+
+.c2:hover {
+  border-color: var(--main-color);
+}
+
+.c2:focus,
+.c2 :focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.c3 {
+  appearance: none;
+  border: 1px solid transparent;
+  border-radius: 0;
+  color: var(--white);
+  padding-inline: 0.5rem;
+  padding-block: 1rem;
+  font-size: 2em;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.3s;
+  background-color: var(--grey);
+  grid-area: one;
+}
+
+.c3:hover {
+  border-color: var(--main-color);
+}
+
+.c3:focus,
+.c3 :focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.c4 {
+  appearance: none;
+  border: 1px solid transparent;
+  border-radius: 0;
+  color: var(--white);
+  padding-inline: 0.5rem;
+  padding-block: 1rem;
+  font-size: 2em;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.3s;
+  background-color: var(--grey);
+  grid-area: two;
+}
+
+.c4:hover {
+  border-color: var(--main-color);
+}
+
+.c4:focus,
+.c4 :focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.c5 {
+  appearance: none;
+  border: 1px solid transparent;
+  border-radius: 0;
+  color: var(--white);
+  padding-inline: 0.5rem;
+  padding-block: 1rem;
+  font-size: 2em;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.3s;
+  background-color: var(--grey);
+  grid-area: three;
+}
+
+.c5:hover {
+  border-color: var(--main-color);
+}
+
+.c5:focus,
+.c5 :focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.c6 {
+  appearance: none;
+  border: 1px solid transparent;
+  border-radius: 0;
+  color: var(--white);
+  padding-inline: 0.5rem;
+  padding-block: 1rem;
+  font-size: 2em;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.3s;
+  background-color: var(--grey);
+  grid-area: four;
+}
+
+.c6:hover {
+  border-color: var(--main-color);
+}
+
+.c6:focus,
+.c6 :focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.c7 {
+  appearance: none;
+  border: 1px solid transparent;
+  border-radius: 0;
+  color: var(--white);
+  padding-inline: 0.5rem;
+  padding-block: 1rem;
+  font-size: 2em;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.3s;
+  background-color: var(--grey);
+  grid-area: five;
+}
+
+.c7:hover {
+  border-color: var(--main-color);
+}
+
+.c7:focus,
+.c7 :focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.c8 {
+  appearance: none;
+  border: 1px solid transparent;
+  border-radius: 0;
+  color: var(--white);
+  padding-inline: 0.5rem;
+  padding-block: 1rem;
+  font-size: 2em;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.3s;
+  background-color: var(--grey);
+  grid-area: six;
+}
+
+.c8:hover {
+  border-color: var(--main-color);
+}
+
+.c8:focus,
+.c8 :focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.c9 {
+  appearance: none;
+  border: 1px solid transparent;
+  border-radius: 0;
+  color: var(--white);
+  padding-inline: 0.5rem;
+  padding-block: 1rem;
+  font-size: 2em;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.3s;
+  background-color: var(--grey);
+  grid-area: seven;
+}
+
+.c9:hover {
+  border-color: var(--main-color);
+}
+
+.c9:focus,
+.c9 :focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.c10 {
+  appearance: none;
+  border: 1px solid transparent;
+  border-radius: 0;
+  color: var(--white);
+  padding-inline: 0.5rem;
+  padding-block: 1rem;
+  font-size: 2em;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.3s;
+  background-color: var(--grey);
+  grid-area: eight;
+}
+
+.c10:hover {
+  border-color: var(--main-color);
+}
+
+.c10:focus,
+.c10 :focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.c11 {
+  appearance: none;
+  border: 1px solid transparent;
+  border-radius: 0;
+  color: var(--white);
+  padding-inline: 0.5rem;
+  padding-block: 1rem;
+  font-size: 2em;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.3s;
+  background-color: var(--grey);
+  grid-area: nine;
+}
+
+.c11:hover {
+  border-color: var(--main-color);
+}
+
+.c11:focus,
+.c11 :focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.c12 {
+  appearance: none;
+  border: 1px solid transparent;
+  border-radius: 0;
+  color: var(--white);
+  padding-inline: 0.5rem;
+  padding-block: 1rem;
+  font-size: 2em;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.3s;
+  background-color: var(--black);
+  grid-area: inverse;
+}
+
+.c12:hover {
+  border-color: var(--main-color);
+}
+
+.c12:focus,
+.c12 :focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.c13 {
+  appearance: none;
+  border: 1px solid transparent;
+  border-radius: 0;
+  color: var(--white);
+  padding-inline: 0.5rem;
+  padding-block: 1rem;
+  font-size: 2em;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.3s;
+  background-color: var(--black);
+  grid-area: clear;
+}
+
+.c13:hover {
+  border-color: var(--main-color);
+}
+
+.c13:focus,
+.c13 :focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.c14 {
+  appearance: none;
+  border: 1px solid transparent;
+  border-radius: 0;
+  color: var(--white);
+  padding-inline: 0.5rem;
+  padding-block: 1rem;
+  font-size: 2em;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.3s;
+  background-color: var(--black);
+  grid-area: divide;
+}
+
+.c14:hover {
+  border-color: var(--main-color);
+}
+
+.c14:focus,
+.c14 :focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.c15 {
+  appearance: none;
+  border: 1px solid transparent;
+  border-radius: 0;
+  color: var(--white);
+  padding-inline: 0.5rem;
+  padding-block: 1rem;
+  font-size: 2em;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.3s;
+  background-color: var(--black);
+  grid-area: multiply;
+}
+
+.c15:hover {
+  border-color: var(--main-color);
+}
+
+.c15:focus,
+.c15 :focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.c16 {
+  appearance: none;
+  border: 1px solid transparent;
+  border-radius: 0;
+  color: var(--white);
+  padding-inline: 0.5rem;
+  padding-block: 1rem;
+  font-size: 2em;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.3s;
+  background-color: var(--grey);
+  grid-area: add;
+}
+
+.c16:hover {
+  border-color: var(--main-color);
+}
+
+.c16:focus,
+.c16 :focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.c17 {
+  appearance: none;
+  border: 1px solid transparent;
+  border-radius: 0;
+  color: var(--white);
+  padding-inline: 0.5rem;
+  padding-block: 1rem;
+  font-size: 2em;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.3s;
+  background-color: var(--grey);
+  grid-area: subtract;
+}
+
+.c17:hover {
+  border-color: var(--main-color);
+}
+
+.c17:focus,
+.c17 :focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.c18 {
+  appearance: none;
+  border: 1px solid transparent;
+  border-radius: 0;
+  color: var(--white);
+  padding-inline: 0.5rem;
+  padding-block: 1rem;
+  font-size: 2em;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.3s;
+  background-color: var(--main-color);
+  border-end-end-radius: var(--border-radius);
+  background-color: var(--main-color);
+  grid-area: equal;
+}
+
+.c18:hover {
+  border-color: var(--main-color);
+}
+
+.c18:focus,
+.c18 :focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.c19 {
+  appearance: none;
+  border: 1px solid transparent;
+  border-radius: 0;
+  color: var(--white);
+  padding-inline: 0.5rem;
+  padding-block: 1rem;
+  font-size: 2em;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.3s;
+  background-color: var(--grey);
+  grid-area: dot;
+}
+
+.c19:hover {
+  border-color: var(--main-color);
+}
+
+.c19:focus,
+.c19 :focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.c1 {
+  border: none;
+  border-start-start-radius: var(--border-radius);
+  border-start-end-radius: var(--border-radius);
+  grid-area: screen;
+  text-align: right;
+  color: var(--black);
+  font-size: 2rem;
+  padding: 2rem;
+  min-height: 4rem;
+  font-family: monospace;
+  background-color: var(--green);
+}
+
+.c0 {
+  margin: auto;
+  display: grid;
+  grid-template-areas: 'screen screen screen screen' 'screen screen screen screen' 'clear inverse divide multiply' 'seven eight nine add' 'four five six subtract' 'one two three equal' 'zero zero dot equal';
+  max-width: 500px;
+  border-radius: var(--border-radius);
+  box-shadow: 3px 3px 5px 0px var(--dark-grey);
+  background-color: var(--dark);
+}
+
+<section
+  class="c0"
+  data-testid="calculator"
+>
+  <input
+    class="c1"
+    readonly=""
+    value=""
+  />
+  <button
+    class="c2"
+    value="0"
+  >
+    0
+  </button>
+  <button
+    class="c3"
+    value="1"
+  >
+    1
+  </button>
+  <button
+    class="c4"
+    value="2"
+  >
+    2
+  </button>
+  <button
+    class="c5"
+    value="3"
+  >
+    3
+  </button>
+  <button
+    class="c6"
+    value="4"
+  >
+    4
+  </button>
+  <button
+    class="c7"
+    value="5"
+  >
+    5
+  </button>
+  <button
+    class="c8"
+    value="6"
+  >
+    6
+  </button>
+  <button
+    class="c9"
+    value="7"
+  >
+    7
+  </button>
+  <button
+    class="c10"
+    value="8"
+  >
+    8
+  </button>
+  <button
+    class="c11"
+    value="9"
+  >
+    9
+  </button>
+  <button
+    class="c12"
+    value="+/-"
+  >
+    +/-
+  </button>
+  <button
+    class="c13"
+    value="C"
+  >
+    C
+  </button>
+  <button
+    class="c14"
+    value="/"
+  >
+    ÷
+  </button>
+  <button
+    class="c15"
+    value="*"
+  >
+    x
+  </button>
+  <button
+    class="c16"
+    value="+"
+  >
+    +
+  </button>
+  <button
+    class="c17"
+    value="-"
+  >
+    -
+  </button>
+  <button
+    class="c18"
+    value="="
+  >
+    =
+  </button>
+  <button
+    class="c19"
+    value="."
+  >
+    .
+  </button>
+</section>
+`;
