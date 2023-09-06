@@ -1,8 +1,12 @@
-import { Operator } from "./types"
+import { Operator } from './types'
 
-const operationRegEx = /[\+\-\*/%^]/
+const operationRegEx = /[+\-*/%^]/
 
-export const calculate = (leftValue: number, operator: Operator, rightValue: number): number => {
+export const calculate = (
+  leftValue: number,
+  operator: Operator,
+  rightValue: number,
+): number => {
   if (!operationRegEx.test(operator)) {
     throw new Error(`This sign (${operator}) is not valid`)
   }
@@ -12,7 +16,7 @@ export const calculate = (leftValue: number, operator: Operator, rightValue: num
     case '-':
       return leftValue - rightValue
     case '/':
-      if (rightValue === 0) throw new Error("Cannot divide by 0")
+      if (rightValue === 0) throw new Error('Cannot divide by 0')
       return leftValue / rightValue
     case '*':
       return leftValue * rightValue
@@ -25,5 +29,7 @@ export const calculate = (leftValue: number, operator: Operator, rightValue: num
   }
 }
 
-export const concatenatePreviousValueAndNext = (value: string) => (previousValue: string): string =>
-  `${previousValue}${value}`.trim()
+export const concatenatePreviousValueAndNext =
+  (value: string) =>
+  (previousValue: string): string =>
+    `${previousValue}${value}`.trim()

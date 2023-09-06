@@ -8,46 +8,48 @@ interface ButtonProps {
 }
 
 export const StyledButton = styled.button<ButtonProps>`
-  ${({
-  $isZero,
-  $isEqual,
-  $isTopRow,
-  $position
-}) => css`
-    appearance: none;
-    border: 1px solid transparent;
-    border-radius: 0;
-    color: var(--white);
-    padding-inline: 0.5rem;
-    padding-block: 1rem;
-    font-size: 2em;
-    background-color: #1a1a1a;
-    cursor: pointer;
-    transition: border-color 0.3s;
-    background-color: ${$isEqual ? 'var(--main-color)' : $isTopRow ? 'var(--black)' : 'var(--grey)'};
-    &:hover {
-      border-color: var(--main-color);
-    }
-    &:focus,
-    :focus-visible {
-      outline: 4px auto -webkit-focus-ring-color;
+  ${({ $isZero, $isEqual, $isTopRow, $position }) => {
+    let bgColor = $isTopRow ? 'var(--black)' : 'var(--grey)'
+    if ($isEqual) {
+      bgColor = 'var(--main-color)'
     }
 
-    ${$isZero
-    ? css`
-          border-end-start-radius: var(--border-radius);
-        `
-    : ''}
+    return css`
+      appearance: none;
+      border: 1px solid transparent;
+      border-radius: 0;
+      color: var(--white);
+      padding-inline: 0.5rem;
+      padding-block: 1rem;
+      font-size: 2em;
+      background-color: #1a1a1a;
+      cursor: pointer;
+      transition: border-color 0.3s;
+      background-color: ${bgColor};
+      &:hover {
+        border-color: var(--main-color);
+      }
+      &:focus,
+      :focus-visible {
+        outline: 4px auto -webkit-focus-ring-color;
+      }
 
-    ${$isEqual
-    ? css`
-          border-end-end-radius: var(--border-radius);
-          background-color: var(--main-color);
-        `
-    : ''}
+      ${$isZero
+        ? css`
+            border-end-start-radius: var(--border-radius);
+          `
+        : ''}
+
+      ${$isEqual
+        ? css`
+            border-end-end-radius: var(--border-radius);
+            background-color: var(--main-color);
+          `
+        : ''}
 
     grid-area: ${$position};
-`}
+    `
+  }}
 `
 
 export const StyledScreen = styled.input`

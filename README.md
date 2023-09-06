@@ -28,7 +28,7 @@ The classical Calculator app in JS
 
 ## Step 6
 
-- [ ] **CI / CD**
+- [ ] **CI / CD** ([`husky`](https://typicode.github.io/husky/), [`lint-staged`](https://github.com/okonet/lint-staged), [`commitlint`](https://github.com/conventional-changelog/commitlint), [`semantic-release`](https://github.com/semantic-release/semantic-release), **Github actions**)
 
 ## Step 7
 
