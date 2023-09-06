@@ -34,7 +34,6 @@ describe('Calculations', () => {
   })
 })
 
-
 describe('Concatenate', () => {
   it('should concatenate string', () => {
     expect(concatenatePreviousValueAndNext('5')('5')).toEqual('55')

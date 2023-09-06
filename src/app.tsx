@@ -11,7 +11,7 @@ import { calculate, concatenatePreviousValueAndNext } from './helpers'
 import { StyledButton, StyledCalculator, StyledScreen } from './styles'
 import { Operator, operatorSchema } from './types'
 
-function App() {
+function App(): JSX.Element {
   const [firstNumber, setFirstNumber] = useState(initialFirstNumber)
   const [secondNumber, setSecondNumber] = useState(initialSecondNumber)
   const [isFirstNumberSelected, setIsFirstNumberSelected] = useState(true)
@@ -30,7 +30,7 @@ function App() {
 
   const handleNumberClick: MouseEventHandler<HTMLButtonElement> = event => {
     if (!(event.target instanceof HTMLButtonElement)) return
-    const value = event.target.value
+    const { value } = event.target
     if (value === undefined) return
     const setNumber = concatenatePreviousValueAndNext(value)
     if (isFirstNumberSelected === true) {
@@ -49,7 +49,7 @@ function App() {
     if (!(event.target instanceof HTMLButtonElement)) return
     const op = event.target.value
     if (op === undefined) {
-      console.log('No operator')
+      window.console.log('No operator')
       return
     }
     const parsedOperator = operatorSchema.parse(op)
@@ -80,24 +80,54 @@ function App() {
   }
 
   const functionButtons = [
-    { position: 'inverse', value: '+/-', text: '+/-', handler: changeSign },
-    { position: 'clear', value: 'C', text: 'C', handler: handleClear },
-    { position: 'divide', value: '/', text: '÷', handler: handleOperatorClick },
+    {
+      position: 'inverse',
+      value: '+/-',
+      text: '+/-',
+      handler: changeSign,
+    },
+    {
+      position: 'clear',
+      value: 'C',
+      text: 'C',
+      handler: handleClear,
+    },
+    {
+      position: 'divide',
+      value: '/',
+      text: '÷',
+      handler: handleOperatorClick,
+    },
     {
       position: 'multiply',
       value: '*',
       text: 'x',
       handler: handleOperatorClick,
     },
-    { position: 'add', value: '+', text: '+', handler: handleOperatorClick },
+    {
+      position: 'add',
+      value: '+',
+      text: '+',
+      handler: handleOperatorClick,
+    },
     {
       position: 'subtract',
       value: '-',
       text: '-',
       handler: handleOperatorClick,
     },
-    { position: 'equal', value: '=', text: '=', handler: handleCalculate },
-    { position: 'dot', value: '.', text: '.', handler: handleNumberClick },
+    {
+      position: 'equal',
+      value: '=',
+      text: '=',
+      handler: handleCalculate,
+    },
+    {
+      position: 'dot',
+      value: '.',
+      text: '.',
+      handler: handleNumberClick,
+    },
   ] as const
 
   const numberButtons = INDEX_TO_WORD.map((text, index) => ({

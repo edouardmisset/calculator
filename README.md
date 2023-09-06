@@ -28,11 +28,11 @@ The classical Calculator app in JS
 
 ## Step 6
 
-- [ ] **CI / CD**
+- [x] **CI / CD** ([`husky`](https://typicode.github.io/husky/), [`lint-staged`](https://github.com/okonet/lint-staged), [`commitlint`](https://github.com/conventional-changelog/commitlint), [`semantic-release`](https://github.com/semantic-release/semantic-release), **Github actions**)
 
 ## Step 7
 
-- [ ] **Tooling**: ESLint (with AirBnB preset) + Prettier (with at least one custom rule)
+- [x] **Tooling**: ESLint (with AirBnB preset) + Prettier (with at least one custom rule)
 
 ## Step 8
 
