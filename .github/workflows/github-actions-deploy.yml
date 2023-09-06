@@ -1,8 +1,5 @@
 name: Deploy
 on:
-  pull_request:
-    branches:
-      - main
   push:
     branches:
       - main
@@ -39,8 +36,6 @@ jobs:
         run: yarn install
       - name: Format the code
         run: yarn run lint
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2
 
   # Build job
   build:
