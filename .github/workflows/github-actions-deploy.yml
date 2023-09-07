@@ -99,8 +99,6 @@ jobs:
       id-token: write # to enable use of OIDC for npm provenance
     steps:
       - name: Git checkout
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
@@ -108,3 +106,5 @@ jobs:
         run: yarn install
       - name: Run semantic-release
         run: npx semantic-release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
