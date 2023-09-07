@@ -43,6 +43,8 @@ jobs:
     needs: format
     runs-on: ubuntu-latest
     steps:
+      - name: Build App
+        run: yarn build
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Build with Jekyll
@@ -52,6 +54,12 @@ jobs:
           destination: ./_site
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
+      - name: Save build files
+        uses: actions/upload-artifact@v3
+        with:
+          name: dist
+          if-no-files-found: error
+          path: dist
 
   # Test job
   test:
@@ -63,6 +71,8 @@ jobs:
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
+      - name: Download all artifacts
+        uses: actions/download-artifact@v3
       - name: Install dependencies
         run: yarn install
       - name: Run tests
@@ -70,7 +80,6 @@ jobs:
       - name: Run End-to-end tests
         uses: cypress-io/github-action@v6
         with:
-          build: yarn build
           start: yarn preview --port=5173
         timeout-minutes: 5
 
