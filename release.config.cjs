@@ -20,5 +20,5 @@ module.exports = {
     ],
     "@semantic-release/git",
   ],
-  extends: ['@semantic-release/github-config'],
+  extends: ['@semantic-release/github'],
 }
