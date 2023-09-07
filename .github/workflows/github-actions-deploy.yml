@@ -86,6 +86,10 @@ jobs:
         uses: actions/download-artifact@v3
       - name: Install
         run: yarn install
+      - name: Git config set user email
+        run: git config --global user.email "edouardmisset@gmail.com"
+      - name: Git config set user name
+        run: git config --global user.name "Edouard Misset"
       - name: GitHub Pages
         run: yarn run deploy
 
