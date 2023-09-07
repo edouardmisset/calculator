@@ -69,6 +69,9 @@ jobs:
         run: yarn run test --run
       - name: Run End-to-end tests
         uses: cypress-io/github-action@v6
+        with:
+          build: yarn build
+          start: yarn preview --port=5173
         timeout-minutes: 5
 
 
