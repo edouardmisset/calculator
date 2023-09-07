@@ -43,6 +43,14 @@ jobs:
     needs: format
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Build App
+        run: yarn build
+      - name: Install dependencies
+        run: yarn install
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Build with Jekyll
@@ -50,8 +58,6 @@ jobs:
         with:
           source: ./
           destination: ./_site
-      - name: Build App
-        run: yarn build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
       - name: Save build files
