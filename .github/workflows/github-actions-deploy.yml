@@ -98,11 +98,13 @@ jobs:
       pull-requests: write # to be able to comment on released pull requests
       id-token: write # to enable use of OIDC for npm provenance
     steps:
-      - name: Release
+      - name: Git checkout
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
-      - name: Release
+      - name: Install dependencies
+        run: yarn install
+      - name: Run semantic-release
         run: npx semantic-release
