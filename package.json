@@ -17,7 +17,8 @@
     "test:e2e": "yarn run cypress run",
     "test:all": "vitest test --run && yarn run test:e2e",
     "cypress:open": "cypress open",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "reset": "rm -rf node_modules yarn.lock && yarn"
   },
   "dependencies": {
     "jest-styled-components": "^7.1.1",
