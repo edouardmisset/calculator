@@ -65,10 +65,12 @@ jobs:
           fetch-depth: 0
       - name: Install dependencies
         run: yarn install
-      - name: Start dev server
-        run: yarn dev
       - name: Run tests
-        run: yarn run test:all
+        run: yarn run test --run
+      - name: Run End-to-end tests
+        uses: cypress-io/github-action@v6
+        timeout-minutes: 5
+
 
   # Release job
   release:
