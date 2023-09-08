@@ -1,14 +1,15 @@
 import styled, { css } from 'styled-components'
 
 interface ButtonProps {
-  $isZero: boolean
+  $isBottomLeft: boolean
+  $isBottomRight: boolean
   $isEqual: boolean
   $isTopRow: boolean
   $position: string
 }
 
 export const StyledButton = styled.button<ButtonProps>`
-  ${({ $isZero, $isEqual, $isTopRow, $position }) => {
+  ${({ $isBottomLeft, $isEqual, $isTopRow, $position, $isBottomRight }) => {
     let bgColor = $isTopRow ? 'var(--black)' : 'var(--grey)'
     if ($isEqual) {
       bgColor = 'var(--main-color)'
@@ -34,16 +35,14 @@ export const StyledButton = styled.button<ButtonProps>`
         outline: 4px auto -webkit-focus-ring-color;
       }
 
-      ${$isZero
+      ${$isBottomLeft
         ? css`
             border-end-start-radius: var(--border-radius);
           `
         : ''}
-
-      ${$isEqual
+      ${$isBottomRight
         ? css`
             border-end-end-radius: var(--border-radius);
-            background-color: var(--main-color);
           `
         : ''}
 
@@ -65,6 +64,7 @@ export const StyledScreen = styled.input`
   font-family: monospace;
   background-color: var(--green);
 `
+
 export const StyledCalculator = styled.section`
   margin: auto;
   display: grid;
@@ -72,10 +72,10 @@ export const StyledCalculator = styled.section`
     'screen screen screen screen'
     'screen screen screen screen'
     'clear inverse divide multiply'
-    'seven eight nine add'
-    'four five six subtract'
-    'one two three equal'
-    'zero zero dot equal';
+    'seven eight nine power'
+    'four five six modulo'
+    'one two three subtract'
+    'zero dot equal add';
   max-width: 500px;
   border-radius: var(--border-radius);
   box-shadow: 3px 3px 5px 0px var(--dark-grey);
