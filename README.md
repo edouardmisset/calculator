@@ -36,7 +36,7 @@ The classical Calculator app in JS
 
 ## Step 8
 
-- [ ] Log an **issue**, create a **MR**, correct it and auto redeploy
+- [x] Log an **issue**, create a **MR**, correct it and auto redeploy
 
 ## Step 9
 
