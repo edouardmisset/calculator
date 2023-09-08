@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "build": "tsc && vite build",
-    "precommit": "yarn tsc && yarn test --run && eslint --fix && prettier --write",
+    "precommit": "yarn tsc && yarn format && yarn test --run && eslint --fix && prettier --write",
     "predeploy": "yarn build",
     "deploy": "gh-pages -d dist",
     "dev": "vite",

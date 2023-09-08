@@ -128,6 +128,18 @@ function App(): JSX.Element {
       text: '.',
       handler: handleNumberClick,
     },
+    {
+      position: 'power',
+      value: '^',
+      text: '^',
+      handler: handleOperatorClick,
+    },
+    {
+      position: 'modulo',
+      value: '%',
+      text: '%',
+      handler: handleOperatorClick,
+    },
   ] as const
 
   const numberButtons = INDEX_TO_WORD.map((text, index) => ({
@@ -157,7 +169,8 @@ function App(): JSX.Element {
         <StyledScreen value={screenValue} readOnly />
         {buttons.map(({ value, position, text, handler }) => (
           <StyledButton
-            $isZero={value === 0}
+            $isBottomLeft={value === 0}
+            $isBottomRight={value === '+'}
             $isEqual={value === '='}
             onClick={handler}
             $isTopRow={topRow.has(value.toString())}

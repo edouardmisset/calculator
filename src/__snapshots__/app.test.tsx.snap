@@ -350,6 +350,7 @@ exports[`App > Loads and displays the calculator 1`] = `
   cursor: pointer;
   transition: border-color 0.3s;
   background-color: var(--grey);
+  border-end-end-radius: var(--border-radius);
   grid-area: add;
 }
 
@@ -398,8 +399,6 @@ exports[`App > Loads and displays the calculator 1`] = `
   cursor: pointer;
   transition: border-color 0.3s;
   background-color: var(--main-color);
-  border-end-end-radius: var(--border-radius);
-  background-color: var(--main-color);
   grid-area: equal;
 }
 
@@ -436,6 +435,54 @@ exports[`App > Loads and displays the calculator 1`] = `
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+.c20 {
+  appearance: none;
+  border: 1px solid transparent;
+  border-radius: 0;
+  color: var(--white);
+  padding-inline: 0.5rem;
+  padding-block: 1rem;
+  font-size: 2em;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.3s;
+  background-color: var(--grey);
+  grid-area: power;
+}
+
+.c20:hover {
+  border-color: var(--main-color);
+}
+
+.c20:focus,
+.c20 :focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.c21 {
+  appearance: none;
+  border: 1px solid transparent;
+  border-radius: 0;
+  color: var(--white);
+  padding-inline: 0.5rem;
+  padding-block: 1rem;
+  font-size: 2em;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.3s;
+  background-color: var(--grey);
+  grid-area: modulo;
+}
+
+.c21:hover {
+  border-color: var(--main-color);
+}
+
+.c21:focus,
+.c21 :focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
 .c1 {
   border: none;
   border-start-start-radius: var(--border-radius);
@@ -453,7 +500,7 @@ exports[`App > Loads and displays the calculator 1`] = `
 .c0 {
   margin: auto;
   display: grid;
-  grid-template-areas: 'screen screen screen screen' 'screen screen screen screen' 'clear inverse divide multiply' 'seven eight nine add' 'four five six subtract' 'one two three equal' 'zero zero dot equal';
+  grid-template-areas: 'screen screen screen screen' 'screen screen screen screen' 'clear inverse divide multiply' 'seven eight nine power' 'four five six modulo' 'one two three subtract' 'zero dot equal add';
   max-width: 500px;
   border-radius: var(--border-radius);
   box-shadow: 3px 3px 5px 0px var(--dark-grey);
@@ -576,6 +623,18 @@ exports[`App > Loads and displays the calculator 1`] = `
     value="."
   >
     .
+  </button>
+  <button
+    class="c20"
+    value="^"
+  >
+    ^
+  </button>
+  <button
+    class="c21"
+    value="%"
+  >
+    %
   </button>
 </section>
 `;
