@@ -1,3 +1,3 @@
 export default {
-  "**/*.ts?(x)": "yarn precommit",
+  "**/*.ts?(x)": "bun run precommit",
 }
