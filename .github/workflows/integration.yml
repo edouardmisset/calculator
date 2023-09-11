@@ -1,0 +1,40 @@
+name: Deploy
+on:
+  pull_request:
+    branches:
+      - main
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+permissions:
+  contents: read # for checkout
+  id-token: write
+
+concurrency:
+  group: 'test'
+  cancel-in-progress: true
+
+jobs:
+  # Build & Test
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Install bun
+        uses: oven-sh/setup-bun@v1
+      - name: Install dependencies
+        run: bun install
+      - name: Format code
+        run: bun run lint
+      - name: Build App
+        run: bun run build
+      - name: Run unit tests
+        run: bun run test:coverage
+      - name: Run end-to-end tests
+        uses: cypress-io/github-action@v6 # This action needs a yarn.lock file or equivalent to work :(
+        with:
+          start: bun run preview --port=5173
+        timeout-minutes: 5

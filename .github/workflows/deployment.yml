@@ -19,9 +19,12 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  # Build job
-  build:
-    name: build
+  # Build & Deploy
+  deploy:
+    name: Deploy
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -30,8 +33,6 @@ jobs:
         uses: oven-sh/setup-bun@v1
       - name: Install dependencies
         run: bun install
-      - name: Format the code
-        run: bun run lint
       - name: Build App
         run: bun run build
       - name: Save build files
@@ -46,54 +47,14 @@ jobs:
         uses: actions/upload-pages-artifact@v2
         with:
           path: dist
-
-  # Test job
-  test:
-    name: Test
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - name: Git checkout
-        uses: actions/checkout@v3
-      - name: Install bun
-        uses: oven-sh/setup-bun@v1
-      - name: Install dependencies
-        run: bun install
-      - name: Download all artifacts
-        uses: actions/download-artifact@v3
-      - name: Run tests
-        run: bun run test:coverage
-      - name: Run End-to-end tests
-        uses: cypress-io/github-action@v6
-        with:
-          start: bun run preview --port=5173
-        timeout-minutes: 5
-
-  # Deployment job
-  deploy:
-    name: Deploy
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: [build, test]
-    steps:
-      - name: Git checkout
-        uses: actions/checkout@v3
-      - name: Install bun
-        uses: oven-sh/setup-bun@v1
-      - name: Download all artifacts
-        uses: actions/download-artifact@v3
-      - name: Install
-        run: bun install
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
 
-  # Release job
+  # Release
   release:
     name: Release
-    needs: [build, test, deploy]
+    needs: [deploy]
     runs-on: ubuntu-latest
     permissions:
       contents: write # to be able to publish a GitHub release
@@ -108,6 +69,6 @@ jobs:
       - name: Install dependencies
         run: bun install
       - name: Run semantic-release
-        run: npx semantic-release
+        run: bunx semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
