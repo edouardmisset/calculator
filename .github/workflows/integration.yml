@@ -46,9 +46,9 @@ jobs:
         with:
           path: dist
 
-      - name: Run tests
+      - name: Run unit tests
         run: bun run test:coverage
-      - name: Run End-to-end tests
+      - name: Run end-to-end tests
         uses: cypress-io/github-action@v6 # This action needs a yarn.lock file or equivalent to work :(
         with:
           start: bun run preview --port=5173
