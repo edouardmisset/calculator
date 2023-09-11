@@ -40,4 +40,4 @@ The classical Calculator app in JS
 
 ## Step 9
 
-- [ ] Create a project **template** from this one
+- [x] Create a project **template** from this one
