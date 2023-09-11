@@ -1,3 +1,6 @@
+/// <reference lib="dom" />
+/// <reference lib="dom.iterable" />
+
 import '@total-typescript/ts-reset'
 import React from 'react'
 import ReactDOM from 'react-dom/client'

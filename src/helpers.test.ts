@@ -17,7 +17,7 @@ describe('Calculations', () => {
   it('Division', () => {
     expect(calculate(5, '/', 2)).toEqual(2.5)
     expect(calculate(-1, '/', 2)).toEqual(-0.5)
-    expect(() => calculate(1, '/', 0)).toThrowError('Cannot divide by 0')
+    expect(() => calculate(1, '/', 0)).toThrow('Cannot divide by 0')
   })
   it('Modulo', () => {
     expect(calculate(5, '%', 2)).toEqual(1)

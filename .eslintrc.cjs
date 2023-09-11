@@ -24,6 +24,7 @@ module.exports = {
     "semi": ["warn", "never"],
     "arrow-parens": ["warn", "as-needed"],
     "comma-dangle": ["error", "always-multiline"],
+    "@typescript-eslint/no-unused-vars": "warn",
     'no-use-before-define': 'off',
     '@typescript-eslint/no-use-before-define': [
       'error',
