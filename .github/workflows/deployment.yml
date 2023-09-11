@@ -19,7 +19,7 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  # Build & Deploy job
+  # Build & Deploy
   deploy:
     name: deploy
     environment:
@@ -51,7 +51,7 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v2
 
-  # Release job
+  # Release
   release:
     name: Release
     needs: [deploy]
