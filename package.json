@@ -21,7 +21,7 @@
     "test:all": "bun run test:once && bun run test:e2e",
     "cypress:open": "cypress open",
     "prepare": "husky install",
-    "release": "bunx --bun semantic-release",
+    "release": "npx semantic-release",
     "reset": "rm -rf node_modules bun.lockb && bun install"
   },
   "dependencies": {
