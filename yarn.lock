@@ -3408,10 +3408,10 @@ builtins@^5.0.0:
   dependencies:
     semver "^7.0.0"
 
-bun-types@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/bun-types/-/bun-types-1.0.1.tgz#8bcb10ae3a1548a39f0932fdb365f4b3a649efba"
-  integrity sha512-7NrXqhMIaNKmWn2dSWEQ50znMZqrN/5Z0NBMXvQTRu/+Y1CvoXRznFy0pnqLe024CeZgVdXoEpARNO1JZLAPGw==
+bun-types@^1.0.15:
+  version "1.0.15"
+  resolved "https://registry.yarnpkg.com/bun-types/-/bun-types-1.0.15.tgz#6905c697627a1690f23512986c47260330f48c3d"
+  integrity sha512-XkEvWLV1JIhcVIpf2Lu6FXnZUxRUkQVJmgY+VT7os6Tk5X1nkXx11q4Rtu6txsqpDJZfUeZXblnnD59K+6wsVA==
 
 cac@^6.7.14:
   version "6.7.14"
