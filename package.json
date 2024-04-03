@@ -29,7 +29,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "styled-components": "^6.0.7",
-    "zod": "^3.22.2"
+    "zod": "^3.22.3"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.7.1",
@@ -68,7 +68,7 @@
     "prettier": "^3.0.3",
     "semantic-release": "^21.1.1",
     "typescript": "^5.2.2",
-    "vite": "^4.4.12",
+    "vite": "^4.5.3",
     "vitest": "^0.34.3"
   }
 }
