@@ -66,8 +66,8 @@ header {
   color: var(--orange); /* Fallback solid color */
 
   /* Text color gradient properties */
-  background: -webkit-linear-gradient(var(--red), var(--yellow));
+  background: linear-gradient(var(--red), var(--yellow));
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; /* Webkit Disable Fallback */
+  -webkit-text-fill-color: transparent;
   background-clip: text;
 }
