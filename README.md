@@ -1,5 +1,7 @@
 # Calculator
 
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/73cdc8ad4d934caba6d3dc019739bba3)](https://app.codacy.com/gh/edouardmisset/calculator/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
+
 The classical Calculator app in JS
 
 ## Step 1
