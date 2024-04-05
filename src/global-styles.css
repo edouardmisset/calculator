@@ -4,27 +4,27 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
+  color: rgb(255 255 255 / 87%);
   background-color: #242424;
 
-  --main-color: hsl(26, 95%, 48%);
-  --green: hsl(74, 38%, 62%);
-  --dark-green: hsl(106, 75%, 55%);
-  --white: hsl(0, 0%, 95%);
-  --grey: hsl(0, 0%, 41%);
-  --dark-grey: hsl(0, 0%, 18%);
-  --black: hsl(0, 0%, 8%);
-  --orange: hsl(16, 100%, 63%);
-  --red: rgb(185, 49, 15);
-  --yellow: rgb(255, 237, 72);
-  --blue: hsl(214, 87%, 59%);
+  --main-color: hsl(26deg 95% 48%);
+  --green: hsl(74deg 38% 62%);
+  --dark-green: hsl(106deg 75% 55%);
+  --white: hsl(0deg 0% 95%);
+  --grey: hsl(0deg 0% 41%);
+  --dark-grey: hsl(0deg 0% 18%);
+  --black: hsl(0deg 0% 8%);
+  --orange: hsl(16deg 100% 63%);
+  --red: rgb(185 49 15);
+  --yellow: rgb(255 237 72);
+  --blue: hsl(214deg 87% 59%);
   --border-radius: 1rem;
 
   font-synthesis: none;
-  text-rendering: optimizeLegibility;
+  text-rendering: optimizelegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 html,
@@ -59,10 +59,7 @@ h1 {
 header {
   font-family: monospace;
   font-weight: 900;
-
-  margin-block-start: 1em;
-  margin-block-end: 2em;
-
+  margin-block: 1em 2em;
   color: var(--orange); /* Fallback solid color */
 
   /* Text color gradient properties */
