@@ -2,7 +2,6 @@
 
 [![Codacy
 Badge](https://app.codacy.com/project/badge/Grade/73cdc8ad4d934caba6d3dc019739bba3)](https://app.codacy.com/gh/edouardmisset/calculator/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
-[![CodeFactor](https://www.codefactor.io/repository/github/edouardmisset/calculator/badge)](https://www.codefactor.io/repository/github/edouardmisset/calculator)
 
 The classical Calculator app in JS
 
