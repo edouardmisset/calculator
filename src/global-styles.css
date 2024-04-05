@@ -64,11 +64,10 @@ header {
   margin-block-end: 2em;
 
   color: var(--orange); /* Fallback solid color */
-  -webkit-text-fill-color: transparent; /* Webkit Disable Fallback */
 
   /* Text color gradient properties */
   background: -webkit-linear-gradient(var(--red), var(--yellow));
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent; /* Webkit Disable Fallback */
   background-clip: text;
 }
