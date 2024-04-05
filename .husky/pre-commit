@@ -1,4 +1,1 @@
-#!/usr/bin/env sh
-. "$(dirname -- "$0")/_/husky.sh"
-
-npx --no-stash --concurrent=false lint-staged
+yarn lint-staged --no-stash --concurrent=false
