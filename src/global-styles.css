@@ -15,7 +15,6 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
   color-scheme: light dark;
   color: rgb(255 255 255 / 87%);
   background-color: #242424;
@@ -63,7 +62,6 @@ header {
 
   /* Text color gradient properties */
   background: linear-gradient(var(--red), var(--yellow));
-  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
