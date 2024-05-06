@@ -72,7 +72,7 @@
     "stylelint-config-standard": "^36.0.0",
     "stylelint-order": "^6.0.4",
     "typescript": "^5.2.2",
-    "vite": "^4.4.12",
+    "vite": "^5.2.11",
     "vitest": "^0.34.3"
   }
 }
