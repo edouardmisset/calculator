@@ -23,6 +23,5 @@ describe('Calculator', () => {
     button1.click()
     buttonEqual.click()
     cy.get('input[readonly]').should('contain.value', '2')
-
   })
 })

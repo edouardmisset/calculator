@@ -1,3 +1,3 @@
 export default {
-  "**/*.ts?(x)": "bun run precommit",
+  '**/*.ts?(x)': 'bun run precommit',
 }

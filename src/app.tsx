@@ -157,7 +157,6 @@ function App(): JSX.Element {
     } else {
       setScreenValue(secondNumber)
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [firstNumber, secondNumber])
 
   return (
