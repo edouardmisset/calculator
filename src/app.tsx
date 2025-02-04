@@ -1,4 +1,4 @@
-import { MouseEventHandler, useEffect, useState } from 'react'
+import React, { MouseEventHandler, useEffect, useState } from 'react'
 import {
   INDEX_TO_WORD,
   initialFirstNumber,
@@ -11,7 +11,7 @@ import { calculate, concatenatePreviousValueAndNext } from './helpers'
 import { StyledButton, StyledCalculator, StyledScreen } from './styles'
 import { Operator, operatorSchema } from './types'
 
-function App(): JSX.Element {
+function App(): React.JSX.Element {
   const [firstNumber, setFirstNumber] = useState(initialFirstNumber)
   const [secondNumber, setSecondNumber] = useState(initialSecondNumber)
   const [isFirstNumberSelected, setIsFirstNumberSelected] = useState(true)
