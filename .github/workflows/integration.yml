@@ -36,5 +36,6 @@ jobs:
       - name: Run end-to-end tests
         uses: cypress-io/github-action@v6 # This action needs a yarn.lock file or equivalent to work :(
         with:
+          build: bun run build
           start: bun run preview --port=5173
         timeout-minutes: 5

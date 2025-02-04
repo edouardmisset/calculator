@@ -1,4 +1,5 @@
 # We lint the message, lint then fomat our code and finally test it before committing
-# https://www.conventionalcommits.org/en/v1.0.0/#summary
 
-yarn commitlint --edit "$1"
+# <https://www.conventionalcommits.org/en/v1.0.0/#summary>
+
+bun commitlint --edit "$1"

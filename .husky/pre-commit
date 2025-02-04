@@ -1,1 +1,1 @@
-yarn lint-staged --no-stash --concurrent=false
+bun lint-staged --no-stash --concurrent=false
