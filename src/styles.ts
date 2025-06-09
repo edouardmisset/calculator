@@ -51,7 +51,7 @@ export const StyledButton = styled.button<ButtonProps>`
   }}
 `
 
-export const StyledScreen = styled.input`
+export const StyledScreen = styled.output`
   border: none;
   border-start-start-radius: var(--border-radius);
   border-start-end-radius: var(--border-radius);
