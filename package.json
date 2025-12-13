@@ -27,8 +27,8 @@
   },
   "dependencies": {
     "jest-styled-components": "^7.2.0",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
     "styled-components": "^6.1.14",
     "zod": "^3.24.1"
   },
@@ -46,8 +46,8 @@
     "@testing-library/react": "^16.2.0",
     "@total-typescript/ts-reset": "^0.6.1",
     "@types/eslint__js": "^8.42.3",
-    "@types/react": "^19.0.8",
-    "@types/react-dom": "^19.0.3",
+    "@types/react": "^19.2.7",
+    "@types/react-dom": "^19.2.3",
     "@typescript-eslint/eslint-plugin": "^8.23.0",
     "@typescript-eslint/parser": "^8.23.0",
     "@vitejs/plugin-react": "^4.3.4",
